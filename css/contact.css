@@ -1,0 +1,189 @@
+/* Progress bar styles */
+.progress-bar {
+    height: 3px;
+    background-color: #2196f3;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+}
+
+/* Background ovals */
+.oval {
+    width: 600px;
+    height: 600px;
+    border-radius: 50%;
+    background: rgba(59, 130, 246, 0.1);
+    position: fixed;
+    top: -300px;
+    right: -300px;
+    z-index: -1;
+}
+
+.aboutus-oval {
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    background: rgba(59, 130, 246, 0.05);
+    position: fixed;
+    bottom: -200px;
+    left: -200px;
+    z-index: -1;
+}
+
+.aboutus-oval-2 {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background: rgba(59, 130, 246, 0.1);
+    position: fixed;
+    top: 50%;
+    left: -150px;
+    z-index: -1;
+}
+
+/* Form focus styles */
+input:focus, 
+select:focus, 
+textarea:focus {
+    outline: none;
+    border-color: #2196f3;
+}
+
+/* Mobile menu styles */
+@media (max-width: 1024px) {
+    .navlinks {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: white;
+        padding: 1rem;
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    }
+
+    .navlinks ul {
+        flex-direction: column;
+    }
+
+    .navlinks li {
+        margin: 0.5rem 0;
+    }
+}
+
+
+/* Progress Bar Animation */
+@-webkit-keyframes nprogress-spinner {
+    0% {
+        -webkit-transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+@keyframes nprogress-spinner {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+#nprogress .peg {
+    display: block;
+    position: absolute;
+    right: 0px;
+    width: 100px;
+    height: 100%;
+    box-shadow: 0 0 10px #29D, 0 0 5px #29D;
+    opacity: 1;
+    transform: rotate(3deg) translate(0px, -4px);
+}
+
+#nprogress .spinner {
+    display: block;
+    position: fixed;
+    z-index: 1031;
+    top: 15px;
+    right: 15px;
+}
+
+#nprogress .spinner-icon {
+    width: 18px;
+    height: 18px;
+    box-sizing: border-box;
+    border: solid 2px transparent;
+    border-top-color: #29D;
+    border-left-color: #29D;
+    border-radius: 50%;
+    animation: nprogress-spinner 400ms linear infinite;
+}
+
+.nprogress-custom-parent {
+    overflow: hidden;
+    position: relative;
+}
+
+.nprogress-custom-parent #nprogress .spinner,
+.nprogress-custom-parent #nprogress .bar {
+    position: absolute;
+}
+
+
+/* Form Styles */
+.contact-form {
+    background: linear-gradient(145deg, #ffffff, #f3f4f6);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    border-radius: 1rem;
+    padding: 2rem;
+}
+
+.form-input {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: 1px solid #e5e7eb;
+    border-radius: 0.5rem;
+    background-color: #f9fafb;
+    transition: all 0.3s ease;
+}
+
+.form-input:focus {
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+    outline: none;
+}
+
+.submit-button {
+    width: 100%;
+    padding: 1rem 2rem;
+    background: linear-gradient(145deg, #3b82f6, #2563eb);
+    color: white;
+    border: none;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.submit-button:hover {
+    background: linear-gradient(145deg, #2563eb, #1d4ed8);
+    transform: translateY(-1px);
+}
+
+.submit-button:active {
+    transform: translateY(1px);
+}
+
+/* Form Layout */
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: #1f2937;
+}
