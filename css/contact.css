@@ -9,38 +9,54 @@
     z-index: 9999;
 }
 
-/* Background ovals */
-.oval {
-    width: 600px;
-    height: 600px;
-    border-radius: 50%;
-    background: rgba(59, 130, 246, 0.1);
+/* Background Elements */
+.background-wrapper {
     position: fixed;
-    top: -300px;
-    right: -300px;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    pointer-events: none;
     z-index: -1;
 }
 
-.aboutus-oval {
-    width: 400px;
-    height: 400px;
+.bg-element-1 {
+    position: absolute;
+    width: 45vw;
+    height: 45vw;
+    top: -10vh;
+    right: -10vw;
+    background-color: rgba(241, 201, 243, 0.3);
     border-radius: 50%;
-    background: rgba(59, 130, 246, 0.05);
-    position: fixed;
-    bottom: -200px;
-    left: -200px;
-    z-index: -1;
+    filter: blur(80px);
 }
 
-.aboutus-oval-2 {
-    width: 300px;
-    height: 300px;
-    border-radius: 50%;
-    background: rgba(59, 130, 246, 0.1);
-    position: fixed;
+.bg-element-2 {
+    position: absolute;
+    width: 40vw;
+    height: 40vw;
     top: 50%;
-    left: -150px;
-    z-index: -1;
+    left: -10vw;
+    background-color: rgba(194, 255, 232, 0.3);
+    border-radius: 50%;
+    filter: blur(80px);
+}
+
+.bg-element-3 {
+    position: absolute;
+    width: 35vw;
+    height: 35vw;
+    bottom: -10vh;
+    right: -5vw;
+    background-color: rgba(146, 252, 159, 0.3);
+    border-radius: 50%;
+    filter: blur(80px);
+}
+
+/* Remove old gradient classes */
+.oval,
+.aboutus-oval,
+.aboutus-oval-2 {
+    display: none;
 }
 
 /* Form focus styles */
@@ -186,4 +202,26 @@ textarea:focus {
     margin-bottom: 0.5rem;
     font-weight: 600;
     color: #1f2937;
+}
+
+
+/* MUI Select Styles */
+.mui-select {
+    font-family: 'Roboto', sans-serif;
+    transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+}
+
+.mui-select:focus {
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.1);
+    background-color: #fff;
+}
+
+.mui-select option {
+    padding: 12px;
+    font-size: 1rem;
+}
+
+.mui-select:hover {
+    background-color: #f8fafc;
 }
