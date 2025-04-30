@@ -1,775 +1,356 @@
 <!DOCTYPE html>
-<html>
-
-<meta http-equiv="content-type" content="text/html;charset=utf-8" />
-
+<html lang="en">
 <head>
-  <meta charSet="utf-8" />
-  <meta name="viewport" content="width=device-width" />
-  <title>Kitmeer</title>
-  <meta name="description" content="Kitmeer" />
-  <link rel="icon" href="favicon.ico" />
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
-  <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kitmeer</title>
+    <meta name="description" content="Kitmeer">
+    <link rel="icon" href="favicon.ico">
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
+<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
 </head>
-
-<body>
-  <div id="__next">
-    <!-- Progress bar using Tailwind -->
-    <div class="fixed top-0 left-0 w-full h-1 bg-blue-500 z-[9999]"></div>
-    <!-- Spinner using Tailwind -->
-    <div class="fixed top-4 right-4 z-[1031]">
-      <div class="w-5 h-5 border-2 border-t-blue-500 border-l-blue-500 border-transparent rounded-full animate-spin">
-      </div>
-    </div>
+<body class="bg-white">
     <div class="min-h-screen flex flex-col">
-      <div class="navbar-wrapper">
-        <div class="spacer bg-transparent"></div>
-        <div class="navbar grid grid-cols-3 lg:grid-cols-5 items-center md:px-8 py-4 bg-transparent w-full">
-          <div class="lg:hidden mr-4">
-            <div class="relative inline-block text-left"><button class="flex justify-center items-center mx-4"
-                type="button" id="radix-:R1j6:" aria-haspopup="menu" data-state="closed"><svg stroke="currentColor"
-                  fill="none" stroke-width="0" viewBox="0 0 24 24"
-                  class="h-12 w-12 bg-slate-800 p-3 text-white rounded-md" height="1em" width="1em"
-                  xmlns="http://www.w3.org/2000/svg">
-                  <path
-                    d="M2 5.99519C2 5.44556 2.44556 5 2.99519 5H11.0048C11.5544 5 12 5.44556 12 5.99519C12 6.54482 11.5544 6.99039 11.0048 6.99039H2.99519C2.44556 6.99039 2 6.54482 2 5.99519Z"
-                    fill="currentColor"></path>
-                  <path
-                    d="M2 11.9998C2 11.4501 2.44556 11.0046 2.99519 11.0046H21.0048C21.5544 11.0046 22 11.4501 22 11.9998C22 12.5494 21.5544 12.9949 21.0048 12.9949H2.99519C2.44556 12.9949 2 12.5494 2 11.9998Z"
-                    fill="currentColor"></path>
-                  <path
-                    d="M2.99519 17.0096C2.44556 17.0096 2 17.4552 2 18.0048C2 18.5544 2.44556 19 2.99519 19H15.0048C15.5544 19 16 18.5544 16 18.0048C16 17.4552 15.5544 17.0096 15.0048 17.0096H2.99519Z"
-                    fill="currentColor"></path>
-                </svg></button></div>
-          </div>
-          <div class="logo cursor-pointer flex items-center justify-center"><img alt="Kitmeer Logo"
-              src="images/logo_light.webp" width="578" height="196" decoding="async" data-nimg="future"
-              class="lg:w-64 md:w-44 sm:w-32" loading="lazy" style="color:transparent" /></div>
-          <div class="navlinks col-span-3 hidden lg:flex w-full items-center justify-center">
-            <ul class="flex items-center text-center"><a class="sm:text-md md:text-lg lg:text-xl font-bold"
-                href="index.html">
-                <li class="group mx-4 list-none cursor-pointer hover:text-blue-800">Home<div
-                    class="h-2 rounded-full bg-blue-400"></div>
-                </li>
-              </a>
-              <div class="relative inline-block text-left"><button class="flex justify-center items-center dropdown"
-                  type="button" id="radix-:Rjj6:" aria-haspopup="menu" data-state="closed">
-                  <div class="group mx-4 list-none cursor-pointer hover:text-blue-800">
-                    <div class="sm:text-md md:text-lg lg:text-xl font-bold">Categories<div
-                        class="w-full h-2 bg-transparent group-hover:bg-blue-400 rounded-full"></div>
-                    </div>
-                  </div>
-                  <div class="-ml-2"><svg width="15" height="15" viewBox="0 0 15 15" fill="none"
-                      xmlns="http://www.w3.org/2000/svg" class="-mt-2">
-                      <path
-                        d="M4.18179 6.18181C4.35753 6.00608 4.64245 6.00608 4.81819 6.18181L7.49999 8.86362L10.1818 6.18181C10.3575 6.00608 10.6424 6.00608 10.8182 6.18181C10.9939 6.35755 10.9939 6.64247 10.8182 6.81821L7.81819 9.81821C7.73339 9.9026 7.61934 9.95001 7.49999 9.95001C7.38064 9.95001 7.26618 9.9026 7.18179 9.81821L4.18179 6.81821C4.00605 6.64247 4.00605 6.35755 4.18179 6.18181Z"
-                        fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"></path>
-                    </svg></div>
-                </button></div><a class="sm:text-md md:text-lg lg:text-xl font-bold" href="products">
-                <li class="group mx-4 list-none cursor-pointer hover:text-blue-800">All Products<div
-                    class="w-full h-2 bg-transparent group-hover:bg-blue-400 rounded-full"></div>
-                </li>
-              </a><a class="sm:text-md md:text-lg lg:text-xl font-bold" href="about.html">
-                <li class="group mx-4 list-none cursor-pointer hover:text-blue-800">About Us<div
-                    class="w-full h-2 bg-transparent group-hover:bg-blue-400 rounded-full"></div>
-                </li>
-              </a><a class="sm:text-md md:text-lg lg:text-xl font-bold" href="contact.html">
-                <li class="group mx-4 list-none cursor-pointer hover:text-blue-800">Contact Us<div
-                    class="w-full h-2 bg-transparent group-hover:bg-blue-400 rounded-full"></div>
-                </li>
-              </a>
-            </ul>
-          </div>
-          <div class="icons flex items-center justify-end z-[999]"><button type="button" aria-haspopup="dialog"
-              aria-expanded="false" aria-controls="radix-:Rcj6:" data-state="closed">
-              <div class="mx-4 relative z-[999]">
-                <div><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 576 512"
-                    class="h-12 w-12 bg-slate-800 p-3 text-white rounded-md" height="1em" width="1em"
-                    xmlns="http://www.w3.org/2000/svg">
-                    <path
-                      d="M528.12 301.319l47.273-208C578.806 78.301 567.391 64 551.99 64H159.208l-9.166-44.81C147.758 8.021 137.93 0 126.529 0H24C10.745 0 0 10.745 0 24v16c0 13.255 10.745 24 24 24h69.883l70.248 343.435C147.325 417.1 136 435.222 136 456c0 30.928 25.072 56 56 56s56-25.072 56-56c0-15.674-6.447-29.835-16.824-40h209.647C430.447 426.165 424 440.326 424 456c0 30.928 25.072 56 56 56s56-25.072 56-56c0-22.172-12.888-41.332-31.579-50.405l5.517-24.276c3.413-15.018-8.002-29.319-23.403-29.319H218.117l-6.545-32h293.145c11.206 0 20.92-7.754 23.403-18.681z">
-                    </path>
-                  </svg></div>
-                <div></div>
-              </div>
-            </button><a class="mr-4" href="products"><svg stroke="currentColor" fill="currentColor" stroke-width="0"
-                viewBox="0 0 512 512" class="h-12 w-12 p-3 text-blue-900 border-blue-900 border-2 rounded-md"
-                height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
-                <path
-                  d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z">
-                </path>
-              </svg></a></div>
+        <!-- Background Elements -->
+        <div class="background-wrapper fixed inset-0 pointer-events-none">
+            <div class="bg-element-1"></div>
+            <div class="bg-element-2"></div>
+            <div class="bg-element-3"></div>
         </div>
-        <div>
-          <div class="oval bgblue !fixed"></div>
-          <div class="aboutus-oval !fixed"></div>
-          <div class="aboutus-oval-2 !fixed"></div>
-          <div>
-            <div class="w-full p-1 lg:p-5 h-auto">
-              <div class="rounded-xl hero h-[50vh] w-full relative"><span
-                  style="box-sizing:border-box;display:block;overflow:hidden;width:initial;height:initial;background:none;opacity:1;border:0;margin:0;padding:0;position:absolute;top:0;left:0;bottom:0;right:0"><img
-                    alt="" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
-                    decoding="async" data-nimg="fill" class="object-center object-cover pointer-events-none rounded-xl"
-                    style="position:absolute;top:0;left:0;bottom:0;right:0;box-sizing:border-box;padding:0;border:none;margin:auto;display:block;width:0;height:0;min-width:100%;max-width:100%;min-height:100%;max-height:100%" /><noscript><img
-                      alt="" sizes="100vw" src="images/home/landing_bg.jpg" data-nimg="fill"
-                      style="position:absolute;top:0;left:0;bottom:0;right:0;box-sizing:border-box;padding:0;border:none;margin:auto;display:block;width:0;height:0;min-width:100%;max-width:100%;min-height:100%;max-height:100%"
-                      class="object-center object-cover pointer-events-none rounded-xl"
-                      loading="lazy" /></noscript></span>
-                <div
-                  class="hero-content relative rounded-xl p-10 z-20 flex justify-center h-full w-full flex-col bg-[url('images/home/landing_bg.jpg')] bg-cover bg-center">
-                  <div class="absolute inset-0 bg-black/40 rounded-xl"></div>
-                  <div class="relative text-white text-2xl md:text-6xl font-bold ml-10">
-                    <p class="text-3xl md:text-7xl">Kitmeer</p>
-                    <p>as simple as can be</p>
-                    <p class="font-light text-xl md:text-4xl">A leader of educational engineering solutions all around
-                      the
-                      world.</p>
-                  </div>
+        
+        <!-- Navigation -->
+        <div class="navbar-wrapper">
+            <div class="spacer bg-transparent"></div>
+            <div class="navbar grid grid-cols-3 lg:grid-cols-5 items-center md:px-8 py-4 bg-transparent w-full">
+                <!-- Mobile Menu Button -->
+                <div class="lg:hidden mr-4">
+                    <button id="mobileMenuBtn" class="flex justify-center items-center mx-4">
+                        <svg stroke="currentColor" fill="none" stroke-width="0" viewBox="0 0 24 24"
+                            class="h-12 w-12 bg-slate-800 p-3 text-white rounded-md" height="1em" width="1em">
+                            <path d="M2 5.99519C2 5.44556 2.44556 5 2.99519 5H11.0048C11.5544 5 12 5.44556 12 5.99519C12 6.54482 11.5544 6.99039 11.0048 6.99039H2.99519C2.44556 6.99039 2 6.54482 2 5.99519Z" fill="currentColor"></path>
+                            <path d="M2 11.9998C2 11.4501 2.44556 11.0046 2.99519 11.0046H21.0048C21.5544 11.0046 22 11.4501 22 11.9998C22 12.5494 21.5544 12.9949 21.0048 12.9949H2.99519C2.44556 12.9949 2 12.5494 2 11.9998Z" fill="currentColor"></path>
+                            <path d="M2.99519 17.0096C2.44556 17.0096 2 17.4552 2 18.0048C2 18.5544 2.44556 19 2.99519 19H15.0048C15.5544 19 16 18.5544 16 18.0048C16 17.4552 15.5544 17.0096 15.0048 17.0096H2.99519Z" fill="currentColor"></path>
+                        </svg>
+                    </button>
                 </div>
-              </div>
+
+                <!-- Logo -->
+                <div class="logo cursor-pointer flex items-center justify-center">
+                    <img alt="Kitmeer Logo" src="images/navbar-footer/logo_light.webp" class="lg:w-64 md:w-44 sm:w-32">
+                </div>
+
+                <!-- Navigation Links -->
+                <div class="navlinks col-span-3 hidden lg:flex w-full items-center justify-center">
+                    <ul class="flex items-center text-center">
+                        <a class="sm:text-md md:text-lg lg:text-xl font-bold" href="home.html">
+                            <li class="group mx-4 list-none cursor-pointer hover:text-blue-800">
+                                Home
+                                <div class="h-2 rounded-full bg-blue-400"></div>
+                            </li>
+                        </a>
+                        <a class="sm:text-md md:text-lg lg:text-xl font-bold" href="products">
+                            <li class="group mx-4 list-none cursor-pointer hover:text-blue-800">
+                                All Products
+                                <div class="w-full h-2 bg-transparent group-hover:bg-blue-400 rounded-full"></div>
+                            </li>
+                        </a>
+                        <a class="sm:text-md md:text-lg lg:text-xl font-bold" href="about.html">
+                            <li class="group mx-4 list-none cursor-pointer hover:text-blue-800">
+                                About Us
+                                <div class="w-full h-2 bg-transparent group-hover:bg-blue-400 rounded-full"></div>
+                            </li>
+                        </a>
+                        <a class="sm:text-md md:text-lg lg:text-xl font-bold" href="contact.html">
+                            <li class="group mx-4 list-none cursor-pointer hover:text-blue-800">
+                                Contact Us
+                                <div class="w-full h-2 bg-transparent group-hover:bg-blue-400 rounded-full"></div>
+                            </li>
+                        </a>
+                    </ul>
+                </div>
+
+                <!-- Icons -->
+                <div class="icons flex items-center justify-end z-[999]">
+                    <button type="button" class="mx-4 relative z-[999]">
+                        <div>
+                            <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 576 512"
+                                class="h-12 w-12 bg-slate-800 p-3 text-white rounded-md" height="1em" width="1em">
+                                <path d="M528.12 301.319l47.273-208C578.806 78.301 567.391 64 551.99 64H159.208l-9.166-44.81C147.758 8.021 137.93 0 126.529 0H24C10.745 0 0 10.745 0 24v16c0 13.255 10.745 24 24 24h69.883l70.248 343.435C147.325 417.1 136 435.222 136 456c0 30.928 25.072 56 56 56s56-25.072 56-56c0-15.674-6.447-29.835-16.824-40h209.647C430.447 426.165 424 440.326 424 456c0 30.928 25.072 56 56 56s56-25.072 56-56c0-22.172-12.888-41.332-31.579-50.405l5.517-24.276c3.413-15.018-8.002-29.319-23.403-29.319H218.117l-6.545-32h293.145c11.206 0 20.92-7.754 23.403-18.681z"></path>
+                            </svg>
+                        </div>
+                    </button>
+                    <a class="mr-4" href="products">
+                        <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512"
+                            class="h-12 w-12 p-3 text-blue-900 border-blue-900 border-2 rounded-md" height="1em" width="1em">
+                            <path d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"></path>
+                        </svg>
+                    </a>
+                </div>
             </div>
-          </div>
-          <div class="relative w-full">
+        </div>
+
+        <!-- Hero Section -->
+        <div class="w-full p-1 lg:p-5 h-auto">
+            <div class="rounded-xl hero h-[50vh] w-full relative bg-[url('../images/home/landing_bg.jpg')] bg-cover bg-center">
+                <div class="hero-content backdrop-blur-sm bg-black/40 rounded-xl p-10 z-20 flex justify-center h-full w-full flex-col">
+                    <div class="text-white text-2xl md:text-6xl font-bold ml-10">
+                        <p class="text-3xl md:text-7xl">Kitmeer</p>
+                        <p>as simple as can be</p>
+                        <p class="font-light text-xl md:text-4xl">A leader of educational engineering solutions all around the world.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Educational Channels Section -->
+        <div class="relative w-full">
             <div class="w-full flex justify-center items-center px-5 mt-4 lg:mt-1">
-              <div
-                class="py-8 bg-gradient-to-r to-cyan-500 from-blue-500 w-full h-full rounded-xl flex justify-center flex-col">
-                <p class="ml-10 text-4xl text-white font-bold">Educational</p>
-                <p class="ml-10 text-4xl text-white font-light">Channels</p>
-              </div>
+                <div class="py-8 bg-gradient-to-r to-cyan-500 from-blue-500 w-full h-full rounded-xl flex justify-center flex-col">
+                    <p class="ml-10 text-4xl text-white font-bold">Educational</p>
+                    <p class="ml-10 text-4xl text-white font-light">Channels</p>
+                </div>
             </div>
-            <div class="xl:ml-[20%] mt-4 md:mt-8 xl:-mt-28 w-auto overflow-hidden">
-              <div class="overflow-hidden">
-                <div class="hidden xl:block xl:w-[95%] minislides p-1 lg:p-5 h-96 xl:h-64">
-                  <div class="swiper">
-                    <div class="swiper-wrapper">
-                      <div class="swiper-slide swiper-slide-duplicate" data-swiper-slide-index="1">
-                        <div class="rounded-xl xl:h-32 w-full flex bg-slate-100 flex-col xl:flex-row p-2"><img
-                            layout="fill"
-                            class="object-center object-cover pointer-events-none rounded-xl xl:w-1/2 h-28"
-                            src="images/home/product-sol.png" alt="product-sol" />
-                          <div class="flex justify-between items-center m-4 font-bold flex-col text-sm">
-                            <p>Products and Solutions</p><button class="text-xs text-blue-500 font-medium">Read
-                              More</button>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="swiper-slide swiper-slide-duplicate" data-swiper-slide-index="2">
-                        <div class="rounded-xl xl:h-32 w-full flex bg-slate-100 flex-col xl:flex-row p-2"><img
-                            layout="fill"
-                            class="object-center object-cover pointer-events-none rounded-xl xl:w-1/2 h-28"
-                            src="images/home/landing_bg.jpg" alt="Vocational" />
-                          <div class="flex justify-between items-center m-4 font-bold flex-col text-sm">
-                            <p>Vocational</p><button class="text-xs text-blue-500 font-medium">Read More</button>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="swiper-slide swiper-slide-duplicate" data-swiper-slide-index="3">
-                        <div class="rounded-xl xl:h-32 w-full flex bg-slate-100 flex-col xl:flex-row p-2"><img
-                            layout="fill"
-                            class="object-center object-cover pointer-events-none rounded-xl xl:w-1/2 h-28"
-                            src="images/home/university.jpg" alt="university" />
-                          <div class="flex justify-between items-center m-4 font-bold flex-col text-sm">
-                            <p>University</p><button class="text-xs text-blue-500 font-medium">Read More</button>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="swiper-slide swiper-slide-duplicate" data-swiper-slide-index="4">
-                        <div class="rounded-xl xl:h-32 w-full flex bg-slate-100 flex-col xl:flex-row p-2"><img
-                            layout="fill"
-                            class="object-center object-cover pointer-events-none rounded-xl xl:w-1/2 h-28"
-                            src="images/home/school.jpg" alt="School" />
-                          <div class="flex justify-between items-center m-4 font-bold flex-col text-sm">
-                            <p>School</p><button class="text-xs text-blue-500 font-medium">Read More</button>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="swiper-slide" data-swiper-slide-index="0">
-                        <div class="rounded-xl xl:h-32 w-full flex bg-slate-100 flex-col xl:flex-row p-2"><img
-                            layout="fill"
-                            class="object-center object-cover pointer-events-none rounded-xl xl:w-1/2 h-28"
-                            src="images/home/industrial-sector.jpg" alt="" />
-                          <div class="flex justify-between items-center m-4 font-bold flex-col text-sm">
-                            <p>Industrial Sector Solutions</p><button class="text-xs text-blue-500 font-medium">Read
-                              More</button>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="swiper-slide" data-swiper-slide-index="1">
-                        <div class="rounded-xl xl:h-32 w-full flex bg-slate-100 flex-col xl:flex-row p-2"><img
-                            layout="fill"
-                            class="object-center object-cover pointer-events-none rounded-xl xl:w-1/2 h-28"
-                            src="images/home/product-sol.png" alt="product-sol" />
-                          <div class="flex justify-between items-center m-4 font-bold flex-col text-sm">
-                            <p>Products and Solutions</p><button class="text-xs text-blue-500 font-medium">Read
-                              More</button>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="swiper-slide" data-swiper-slide-index="2">
-                        <div class="rounded-xl xl:h-32 w-full flex bg-slate-100 flex-col xl:flex-row p-2"><img
-                            layout="fill"
-                            class="object-center object-cover pointer-events-none rounded-xl xl:w-1/2 h-28"
-                            src="landing_bg.jpg" alt="Vocational" />
-                          <div class="flex justify-between items-center m-4 font-bold flex-col text-sm">
-                            <p>Vocational</p><button class="text-xs text-blue-500 font-medium">Read More</button>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="swiper-slide" data-swiper-slide-index="3">
-                        <div class="rounded-xl xl:h-32 w-full flex bg-slate-100 flex-col xl:flex-row p-2"><img
-                            layout="fill"
-                            class="object-center object-cover pointer-events-none rounded-xl xl:w-1/2 h-28"
-                            src="images/home/university.jpg" alt="university" />
-                          <div class="flex justify-between items-center m-4 font-bold flex-col text-sm">
-                            <p>University</p><button class="text-xs text-blue-500 font-medium">Read More</button>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="swiper-slide" data-swiper-slide-index="4">
-                        <div class="rounded-xl xl:h-32 w-full flex bg-slate-100 flex-col xl:flex-row p-2"><img
-                            layout="fill"
-                            class="object-center object-cover pointer-events-none rounded-xl xl:w-1/2 h-28"
-                            src="images/home/school.jpg" alt="School" />
-                          <div class="flex justify-between items-center m-4 font-bold flex-col text-sm">
-                            <p>School</p><button class="text-xs text-blue-500 font-medium">Read More</button>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="swiper-slide swiper-slide-duplicate" data-swiper-slide-index="0">
-                        <div class="rounded-xl xl:h-32 w-full flex bg-slate-100 flex-col xl:flex-row p-2"><img
-                            layout="fill"
-                            class="object-center object-cover pointer-events-none rounded-xl xl:w-1/2 h-28"
-                            src="/images/home/industrial-sector.jpg" alt="Industrial" />
-                          <div class="flex justify-between items-center m-4 font-bold flex-col text-sm">
-                            <p>Industrial Sector Solutions</p><button class="text-xs text-blue-500 font-medium">Read
-                              More</button>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="swiper-slide swiper-slide-duplicate" data-swiper-slide-index="1">
-                        <div class="rounded-xl xl:h-32 w-full flex bg-slate-100 flex-col xl:flex-row p-2"><img
-                            layout="fill"
-                            class="object-center object-cover pointer-events-none rounded-xl xl:w-1/2 h-28"
-                            src="images/home/product-sol.png" alt="Products" />
-                          <div class="flex justify-between items-center m-4 font-bold flex-col text-sm">
-                            <p>Products and Solutions</p><button class="text-xs text-blue-500 font-medium">Read
-                              More</button>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="swiper-slide swiper-slide-duplicate" data-swiper-slide-index="2">
-                        <div class="rounded-xl xl:h-32 w-full flex bg-slate-100 flex-col xl:flex-row p-2"><img
-                            layout="fill"
-                            class="object-center object-cover pointer-events-none rounded-xl xl:w-1/2 h-28"
-                            src="landing_bg.jpg" alt="Vocational" />
-                          <div class="flex justify-between items-center m-4 font-bold flex-col text-sm">
-                            <p>Vocational</p><button class="text-xs text-blue-500 font-medium">Read More</button>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="swiper-slide swiper-slide-duplicate" data-swiper-slide-index="3">
-                        <div class="rounded-xl xl:h-32 w-full flex bg-slate-100 flex-col xl:flex-row p-2"><img
-                            layout="fill"
-                            class="object-center object-cover pointer-events-none rounded-xl xl:w-1/2 h-28"
-                            src="images/home/university.jpg" alt="" />
-                          <div class="flex justify-between items-center m-4 font-bold flex-col text-sm">
-                            <p>University</p><button class="text-xs text-blue-500 font-medium">Read More</button>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="swiper-button-prev"></div>
-                    <div class="swiper-button-next"></div>
-                  </div>
-                </div>
-                <div class="hidden md:block xl:hidden xl:w-[75%] minislides p-1 lg:p-5 h-96 xl:h-64">
-                  <div class="swiper">
-                    <div class="swiper-wrapper">
-                      <div class="swiper-slide swiper-slide-duplicate" data-swiper-slide-index="2">
-                        <div class="rounded-xl xl:h-32 w-full flex bg-slate-100 flex-col xl:flex-row"><img layout="fill"
-                            class="object-center object-cover pointer-events-none rounded-xl xl:w-32 h-32"
-                            src="landing_bg.jpg" alt="" />
-                          <div class="flex justify-between items-center m-4 font-bold flex-col text-sm">
-                            <p>Vocational</p><button class="text-xs text-blue-500 font-medium">Read More</button>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="swiper-slide swiper-slide-duplicate" data-swiper-slide-index="3">
-                        <div class="rounded-xl xl:h-32 w-full flex bg-slate-100 flex-col xl:flex-row"><img layout="fill"
-                            class="object-center object-cover pointer-events-none rounded-xl xl:w-32 h-32"
-                            src="images/home/university.jpg" alt="university" />
-                          <div class="flex justify-between items-center m-4 font-bold flex-col text-sm">
-                            <p>University</p><button class="text-xs text-blue-500 font-medium">Read More</button>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="swiper-slide swiper-slide-duplicate" data-swiper-slide-index="4">
-                        <div class="rounded-xl xl:h-32 w-full flex bg-slate-100 flex-col xl:flex-row"><img layout="fill"
-                            class="object-center object-cover pointer-events-none rounded-xl xl:w-32 h-32"
-                            src="images/home/school.jpg" alt="School" />
-                          <div class="flex justify-between items-center m-4 font-bold flex-col text-sm">
-                            <p>School</p><button class="text-xs text-blue-500 font-medium">Read More</button>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="swiper-slide" data-swiper-slide-index="0">
-                        <div class="rounded-xl xl:h-32 w-full flex bg-slate-100 flex-col xl:flex-row"><img layout="fill"
-                            class="object-center object-cover pointer-events-none rounded-xl xl:w-32 h-32"
-                            src="images/home/industrial-sector.jpg" alt="" />
-                          <div class="flex justify-between items-center m-4 font-bold flex-col text-sm">
-                            <p>Industrial Sector Solutions</p><button class="text-xs text-blue-500 font-medium">Read
-                              More</button>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="swiper-slide" data-swiper-slide-index="1">
-                        <div class="rounded-xl xl:h-32 w-full flex bg-slate-100 flex-col xl:flex-row"><img layout="fill"
-                            class="object-center object-cover pointer-events-none rounded-xl xl:w-32 h-32"
-                            src="images/home/product-sol.png" alt="product-sol" />
-                          <div class="flex justify-between items-center m-4 font-bold flex-col text-sm">
-                            <p>Products and Solutions</p><button class="text-xs text-blue-500 font-medium">Read
-                              More</button>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="swiper-slide" data-swiper-slide-index="2">
-                        <div class="rounded-xl xl:h-32 w-full flex bg-slate-100 flex-col xl:flex-row"><img layout="fill"
-                            class="object-center object-cover pointer-events-none rounded-xl xl:w-32 h-32"
-                            src="landing_bg.jpg" alt="" />
-                          <div class="flex justify-between items-center m-4 font-bold flex-col text-sm">
-                            <p>Vocational</p><button class="text-xs text-blue-500 font-medium">Read More</button>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="swiper-slide" data-swiper-slide-index="3">
-                        <div class="rounded-xl xl:h-32 w-full flex bg-slate-100 flex-col xl:flex-row"><img layout="fill"
-                            class="object-center object-cover pointer-events-none rounded-xl xl:w-32 h-32"
-                            src="images/home/university.jpg" alt="university" />
-                          <div class="flex justify-between items-center m-4 font-bold flex-col text-sm">
-                            <p>University</p><button class="text-xs text-blue-500 font-medium">Read More</button>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="swiper-slide" data-swiper-slide-index="4">
-                        <div class="rounded-xl xl:h-32 w-full flex bg-slate-100 flex-col xl:flex-row"><img layout="fill"
-                            class="object-center object-cover pointer-events-none rounded-xl xl:w-32 h-32"
-                            src="images/home/school.jpg" alt="School" />
-                          <div class="flex justify-between items-center m-4 font-bold flex-col text-sm">
-                            <p>School</p><button class="text-xs text-blue-500 font-medium">Read More</button>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="swiper-slide swiper-slide-duplicate" data-swiper-slide-index="0">
-                        <div class="rounded-xl xl:h-32 w-full flex bg-slate-100 flex-col xl:flex-row"><img layout="fill"
-                            class="object-center object-cover pointer-events-none rounded-xl xl:w-32 h-32"
-                            src="images/home/industrial-sector.jpg" alt="" />
-                          <div class="flex justify-between items-center m-4 font-bold flex-col text-sm">
-                            <p>Industrial Sector Solutions</p><button class="text-xs text-blue-500 font-medium">Read
-                              More</button>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="swiper-slide swiper-slide-duplicate" data-swiper-slide-index="1">
-                        <div class="rounded-xl xl:h-32 w-full flex bg-slate-100 flex-col xl:flex-row p-2">
-                          <img class="object-cover w-full xl:w-1/2 h-28 xl:h-full rounded-xl"
-                            src="images/home/product-sol.png" alt="product-sol" />
-                          <div class="flex justify-between items-center m-4 font-bold flex-col text-sm">
-                            <p>Products and Solutions</p><button class="text-xs text-blue-500 font-medium">Read
-                              More</button>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="swiper-slide swiper-slide-duplicate" data-swiper-slide-index="2">
-                        <div class="rounded-xl xl:h-32 w-full flex bg-slate-100 flex-col xl:flex-row p-2"><img
-                            layout="fill"
-                            class="object-center object-cover pointer-events-none rounded-xl xl:w-1/2 h-28"
-                            src="landing_bg.jpg" alt="Vocational" />
-                          <div class="flex justify-between items-center m-4 font-bold flex-col text-sm">
-                            <p>Vocational</p><button class="text-xs text-blue-500 font-medium">Read More</button>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="swiper-slide" data-swiper-slide-index="3">
-                        <div class="rounded-xl xl:h-32 w-full flex bg-slate-100 flex-col xl:flex-row p-2"><img
-                            layout="fill"
-                            class="object-center object-cover pointer-events-none rounded-xl xl:w-1/2 h-28"
-                            src="images/home/university.jpg" alt="university" />
-                          <div class="flex justify-between items-center m-4 font-bold flex-col text-sm">
-                            <p>University</p><button class="text-xs text-blue-500 font-medium">Read More</button>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="swiper-slide" data-swiper-slide-index="4">
-                        <div class="rounded-xl xl:h-32 w-full flex bg-slate-100 flex-col xl:flex-row p-2"><img
-                            layout="fill"
-                            class="object-center object-cover pointer-events-none rounded-xl xl:w-1/2 h-28"
-                            src="images/home/school.jpg" alt="School" />
-                          <div class="flex justify-between items-center m-4 font-bold flex-col text-sm">
-                            <p>School</p><button class="text-xs text-blue-500 font-medium">Read More</button>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="swiper-slide swiper-slide-duplicate" data-swiper-slide-index="0">
-                        <div class="rounded-xl xl:h-32 w-full flex bg-slate-100 flex-col xl:flex-row p-2"><img
-                            layout="fill"
-                            class="object-center object-cover pointer-events-none rounded-xl xl:w-1/2 h-28"
-                            src="images/home/industrial-sector.jpg" alt="Industrial" />
-                          <div class="flex justify-between items-center m-4 font-bold flex-col text-sm">
-                            <p>Industrial Sector Solutions</p><button class="text-xs text-blue-500 font-medium">Read
-                              More</button>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="swiper-slide swiper-slide-duplicate" data-swiper-slide-index="1">
-                        <div class="rounded-xl xl:h-32 w-full flex bg-slate-100 flex-col xl:flex-row p-2"><img
-                            layout="fill"
-                            class="object-center object-cover pointer-events-none rounded-xl xl:w-1/2 h-28"
-                            src="images/home/product-sol.png" alt="Products" />
-                          <div class="flex justify-between items-center m-4 font-bold flex-col text-sm">
-                            <p>Products and Solutions</p><button class="text-xs text-blue-500 font-medium">Read
-                              More</button>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="swiper-slide swiper-slide-duplicate" data-swiper-slide-index="2">
-                        <div class="rounded-xl xl:h-32 w-full flex bg-slate-100 flex-col xl:flex-row p-2"><img
-                            layout="fill"
-                            class="object-center object-cover pointer-events-none rounded-xl xl:w-1/2 h-28"
-                            src="landing_bg.jpg" alt="Vocational" />
-                          <div class="flex justify-between items-center m-4 font-bold flex-col text-sm">
-                            <p>Vocational</p><button class="text-xs text-blue-500 font-medium">Read More</button>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="swiper-slide swiper-slide-duplicate" data-swiper-slide-index="3">
-                        <div class="rounded-xl xl:h-32 w-full flex bg-slate-100 flex-col xl:flex-row p-2"><img
-                            layout="fill"
-                            class="object-center object-cover pointer-events-none rounded-xl xl:w-1/2 h-28"
-                            src="images/home/university.jpg" alt="" />
-                          <div class="flex justify-between items-center m-4 font-bold flex-col text-sm">
-                            <p>University</p><button class="text-xs text-blue-500 font-medium">Read More</button>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="swiper-button-prev"></div>
-                    <div class="swiper-button-next"></div>
-                  </div>
-                </div>
-                <div class="block md:hidden xl:w-[75%] minislides p-1 lg:p-5 h-96 xl:h-64">
-                  <div class="swiper">
-                    <div class="swiper-wrapper">
-                      <div class="swiper-slide swiper-slide-duplicate" data-swiper-slide-index="4">
-                        <div class="rounded-xl xl:h-32 w-full flex bg-slate-100 flex-col xl:flex-row"><img layout="fill"
-                            class="object-center object-cover pointer-events-none rounded-xl xl:w-32 h-72"
-                            src="images/home/school.jpg" alt="School" />
-                          <div class="flex justify-between items-center m-4 font-bold flex-col text-sm">
-                            <p>School</p><button class="text-xs text-blue-500 font-medium">Read More</button>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="swiper-slide" data-swiper-slide-index="0">
-                        <div class="rounded-xl xl:h-32 w-full flex bg-slate-100 flex-col xl:flex-row"><img layout="fill"
-                            class="object-center object-cover pointer-events-none rounded-xl xl:w-32 h-72"
-                            src="images/home/industrial-sector.jpg" alt="" />
-                          <div class="flex justify-between items-center m-4 font-bold flex-col text-sm">
-                            <p>Industrial Sector Solutions</p><button class="text-xs text-blue-500 font-medium">Read
-                              More</button>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="swiper-slide" data-swiper-slide-index="1">
-                        <div class="rounded-xl xl:h-32 w-full flex bg-slate-100 flex-col xl:flex-row"><img layout="fill"
-                            class="object-center object-cover pointer-events-none rounded-xl xl:w-32 h-72"
-                            src="images/home/product-sol.png" alt="product-sol" />
-                          <div class="flex justify-between items-center m-4 font-bold flex-col text-sm">
-                            <p>Products and Solutions</p><button class="text-xs text-blue-500 font-medium">Read
-                              More</button>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="swiper-slide" data-swiper-slide-index="2">
-                        <div class="rounded-xl xl:h-32 w-full flex bg-slate-100 flex-col xl:flex-row"><img layout="fill"
-                            class="object-center object-cover pointer-events-none rounded-xl xl:w-32 h-72"
-                            src="landing_bg.jpg" alt="" />
-                          <div class="flex justify-between items-center m-4 font-bold flex-col text-sm">
-                            <p>Vocational</p><button class="text-xs text-blue-500 font-medium">Read More</button>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="swiper-slide" data-swiper-slide-index="3">
-                        <div class="rounded-xl xl:h-32 w-full flex bg-slate-100 flex-col xl:flex-row"><img layout="fill"
-                            class="object-center object-cover pointer-events-none rounded-xl xl:w-32 h-72"
-                            src="images/home/university.jpg" alt="university" />
-                          <div class="flex justify-between items-center m-4 font-bold flex-col text-sm">
-                            <p>University</p><button class="text-xs text-blue-500 font-medium">Read More</button>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="swiper-slide" data-swiper-slide-index="4">
-                        <div class="rounded-xl xl:h-32 w-full flex bg-slate-100 flex-col xl:flex-row"><img layout="fill"
-                            class="object-center object-cover pointer-events-none rounded-xl xl:w-32 h-72"
-                            src="images/home/school.jpg" alt="School" />
-                          <div class="flex justify-between items-center m-4 font-bold flex-col text-sm">
-                            <p>School</p><button class="text-xs text-blue-500 font-medium">Read More</button>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="swiper-slide swiper-slide-duplicate" data-swiper-slide-index="0">
-                        <div class="rounded-xl xl:h-32 w-full flex bg-slate-100 flex-col xl:flex-row"><img layout="fill"
-                            class="object-center object-cover pointer-events-none rounded-xl xl:w-32 h-72"
-                            src="images/home/industrial-sector.jpg" alt="" />
-                          <div class="flex justify-between items-center m-4 font-bold flex-col text-sm">
-                            <p>Industrial Sector Solutions</p><button class="text-xs text-blue-500 font-medium">Read
-                              More</button>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="swiper-button-prev"></div>
-                    <div class="swiper-button-next"></div>
-                  </div>
-                </div>
-                <div class="block md:hidden xl:w-[75%] minislides p-1 lg:p-5 h-96 xl:h-64">
-                  <div class="swiper">
-                    <div class="swiper-wrapper">
-                      <div class="swiper-slide swiper-slide-duplicate" data-swiper-slide-index="4">
-                        <div class="rounded-xl xl:h-32 w-full flex bg-slate-100 flex-col xl:flex-row"><img layout="fill"
-                            class="object-center object-cover pointer-events-none rounded-xl xl:w-32 h-72"
-                            src="images/home/school.jpg" alt="School" />
-                          <div class="flex justify-between items-center m-4 font-bold flex-col text-sm">
-                            <p>School</p><button class="text-xs text-blue-500 font-medium">Read More</button>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="swiper-slide" data-swiper-slide-index="0">
-                        <div class="rounded-xl xl:h-32 w-full flex bg-slate-100 flex-col xl:flex-row"><img layout="fill"
-                            class="object-center object-cover pointer-events-none rounded-xl xl:w-32 h-72"
-                            src="images/home/industrial-sector.jpg" alt="" />
-                          <div class="flex justify-between items-center m-4 font-bold flex-col text-sm">
-                            <p>Industrial Sector Solutions</p><button class="text-xs text-blue-500 font-medium">Read
-                              More</button>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="swiper-slide" data-swiper-slide-index="1">
-                        <div class="rounded-xl xl:h-32 w-full flex bg-slate-100 flex-col xl:flex-row"><img layout="fill"
-                            class="object-center object-cover pointer-events-none rounded-xl xl:w-32 h-72"
-                            src="images/home/product-sol.png" alt="product-sol" />
-                          <div class="flex justify-between items-center m-4 font-bold flex-col text-sm">
-                            <p>Products and Solutions</p><button class="text-xs text-blue-500 font-medium">Read
-                              More</button>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="swiper-slide" data-swiper-slide-index="2">
-                        <div class="rounded-xl xl:h-32 w-full flex bg-slate-100 flex-col xl:flex-row"><img layout="fill"
-                            class="object-center object-cover pointer-events-none rounded-xl xl:w-32 h-72"
-                            src="landing_bg.jpg" alt="" />
-                          <div class="flex justify-between items-center m-4 font-bold flex-col text-sm">
-                            <p>Vocational</p><button class="text-xs text-blue-500 font-medium">Read More</button>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="swiper-slide" data-swiper-slide-index="3">
-                        <div class="rounded-xl xl:h-32 w-full flex bg-slate-100 flex-col xl:flex-row"><img layout="fill"
-                            class="object-center object-cover pointer-events-none rounded-xl xl:w-32 h-72"
-                            src="images/home/university.jpg" alt="university" />
-                          <div class="flex justify-between items-center m-4 font-bold flex-col text-sm">
-                            <p>University</p><button class="text-xs text-blue-500 font-medium">Read More</button>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="swiper-slide" data-swiper-slide-index="4">
-                        <div class="rounded-xl xl:h-32 w-full flex bg-slate-100 flex-col xl:flex-row"><img layout="fill"
-                            class="object-center object-cover pointer-events-none rounded-xl xl:w-32 h-72"
-                            src="images/home/school.jpg" alt="School" />
-                          <div class="flex justify-between items-center m-4 font-bold flex-col text-sm">
-                            <p>School</p><button class="text-xs text-blue-500 font-medium">Read More</button>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="swiper-slide swiper-slide-duplicate" data-swiper-slide-index="0">
-                        <div class="rounded-xl xl:h-32 w-full flex bg-slate-100 flex-col xl:flex-row"><img layout="fill"
-                            class="object-center object-cover pointer-events-none rounded-xl xl:w-32 h-72"
-                            src="images/home/industrial-sector.jpg" alt="" />
-                          <div class="flex justify-between items-center m-4 font-bold flex-col text-sm">
-                            <p>Industrial Sector Solutions</p><button class="text-xs text-blue-500 font-medium">Read
-                              More</button>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="swiper-button-prev"></div>
-                    <div class="swiper-button-next"></div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="m-5 md:-mt-36 xl:-mt-20 p-5 md:px-32">
-              <h1 class="text-4xl font-bold mb-4">The Best in STEM education</h1>
-              <p class="text-md font-semibold">Here at Kitmeer we pride ourselves on being the best in the<span
-                  class="italic font-bold"> STEM education field</span>, offering hundreds of specifically curated
-                products in order to match the needs of your students. Explore our website to learn more about the
-                solutions we offer or simply get in touch with us directly to know more!</p>
-              <div class="w-full flex justify-center flex-col items-center mt-12 cursor-pointer">
-                <div class="text-xl font-bold">View All Products</div>
-                <div><svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg"
-                    class="w-8 h-8 -mt-2">
-                    <path
-                      d="M3.13523 6.15803C3.3241 5.95657 3.64052 5.94637 3.84197 6.13523L7.5 9.56464L11.158 6.13523C11.3595 5.94637 11.6759 5.95657 11.8648 6.15803C12.0536 6.35949 12.0434 6.67591 11.842 6.86477L7.84197 10.6148C7.64964 10.7951 7.35036 10.7951 7.15803 10.6148L3.15803 6.86477C2.95657 6.67591 2.94637 6.35949 3.13523 6.15803Z"
-                      fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"></path>
-                  </svg></div>
-              </div>
-            </div>
-          </div>
-          <div class="w-full p-5 lg:px-32">
-            <div
-              class="w-full md:h-32 rounded-xl flex justify-evenly border-2 border-black shadow-xl flex-col md:flex-row py-8 md:py-0 bg-white">
-              <div class="h-full flex justify-center items-center md:w-1/3">
-                <div class="flex flex-col justify-center items-center">
-                  <p class="text-2xl font-light">Clients</p>
-                  <p class="text-3xl font-bold">500<!-- -->+</p>
-                  <p class="text-sm font-bold text-center">Worldwide</p>
-                </div>
-              </div>
-              <div class="h-[3px] w-2/3 mx-auto my-6 bg-black rounded-full md:hidden"></div>
-              <div class="h-full flex justify-center items-center md:w-1/3">
-                <div class="flex flex-col justify-center items-center">
-                  <p class="text-2xl font-light">Products</p>
-                  <p class="text-3xl font-bold">800<!-- -->+</p>
-                  <p class="text-sm font-bold text-center">for all education levels</p>
-                </div>
-              </div>
-              <div class="h-[3px] w-2/3 mx-auto my-6 bg-black rounded-full md:hidden"></div>
-              <div class="h-full flex justify-center items-center md:w-1/3">
-                <div class="flex flex-col justify-center items-center">
-                  <p class="text-2xl font-light">Disciplines</p>
-                  <p class="text-3xl font-bold">20<!-- -->+</p>
-                  <p class="text-sm font-bold text-center">different fields</p>
-                </div>
-              </div>
-              <div class="absolute w-full justify-evenly h-32 hidden md:flex">
-                <div class="w-[3px] h-20 my-6 bg-black rounded-full"></div>
-                <div class="w-[3px] h-20 my-6 bg-black rounded-full"></div>
-              </div>
-            </div>
-          </div>
-          <div class="px-5 py-12 md:px-32">
-            <h1 class="text-4xl font-bold mb-4 text-center md:text-left">Kitmeer Latest News</h1>
-            <div id="news">
-              <div class="mantine-Carousel-root mantine-12sbrde">
-                <div class="mantine-1inun54 mantine-Carousel-viewport">
-                  <div class="mantine-16mk38b mantine-Carousel-container">
-                    <div class="mantine-Carousel-slide mantine-gbunjo">
-                      <div class="mantine-Paper-root flex justify-center items-center cursor-grab mantine-b1sjnh">
-                        <div class="bg-black/80 p-4 rounded-xl md:mx-8">
-                          <div class="mantine-Text-root mantine-pvrpid">How do I send a catalogue?</div>
-                          <h3 class="mantine-Text-root mantine-Title-root mantine-hsrsyu">Share information about our
-                            offerings with one easy click.</h3>
-                          <div class="mantine-Text-root mantine-1usjipr">2023-11-01</div>
-                        </div><button
-                          class="bottom-4 absolute p-4 bg-blue-800 rounded-xl font-extrabold text-white">Read
-                          More</button>
-                      </div>
-                    </div>
-                    <div class="mantine-Carousel-slide mantine-gbunjo">
-                      <div class="mantine-Paper-root flex justify-center items-center cursor-grab mantine-1k8ey8b">
-                        <div class="bg-black/80 p-4 rounded-xl md:mx-8">
-                          <div class="mantine-Text-root mantine-pvrpid">Contact Us!</div>
-                          <h3 class="mantine-Text-root mantine-Title-root mantine-hsrsyu">Contact us with your requested
-                            items or just with a simple question!</h3>
-                          <div class="mantine-Text-root mantine-1usjipr">2022-11-02</div>
-                        </div><button
-                          class="bottom-4 absolute p-4 bg-blue-800 rounded-xl font-extrabold text-white">Read
-                          More</button>
-                      </div>
-                    </div>
-                    <div class="mantine-Carousel-slide mantine-gbunjo">
-                      <div class="mantine-Paper-root flex justify-center items-center cursor-grab mantine-5z9705">
-                        <div class="bg-black/80 p-4 rounded-xl md:mx-8">
-                          <div class="mantine-Text-root mantine-pvrpid">Welcome to Kitmeer!</div>
-                          <h3 class="mantine-Text-root mantine-Title-root mantine-hsrsyu">The one stop shop for all
-                            education needs in the world of engineering and science.</h3>
-                          <div class="mantine-Text-root mantine-1usjipr">2022-11-01</div>
-                        </div><button
-                          class="bottom-4 absolute p-4 bg-blue-800 rounded-xl font-extrabold text-white">Read
-                          More</button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="mantine-4ny9bc mantine-Carousel-controls"><button
-                    class="mantine-UnstyledButton-root mantine-Carousel-control mantine-2yup0d" type="button"
-                    data-inactive="true" tabindex="-1"><svg stroke="currentColor" fill="currentColor" stroke-width="0"
-                      viewBox="0 0 1024 1024" class="w-8 h-8 p-1 bg-blue-400 rounded-full font-extrabold text-white"
-                      height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
-                      <path
-                        d="M724 218.3V141c0-6.7-7.7-10.4-12.9-6.3L260.3 486.8a31.86 31.86 0 0 0 0 50.3l450.8 352.1c5.3 4.1 12.9.4 12.9-6.3v-77.3c0-4.9-2.3-9.6-6.1-12.6l-360-281 360-281.1c3.8-3 6.1-7.7 6.1-12.6z">
-                      </path>
-                    </svg></button><button class="mantine-UnstyledButton-root mantine-Carousel-control mantine-2yup0d"
-                    type="button" data-inactive="true" tabindex="-1"><svg stroke="currentColor" fill="currentColor"
-                      stroke-width="0" viewBox="0 0 1024 1024"
-                      class="w-8 h-8 p-1 bg-blue-400 rounded-full font-extrabold text-white" height="1em" width="1em"
-                      xmlns="http://www.w3.org/2000/svg">
-                      <path
-                        d="M765.7 486.8L314.9 134.7A7.97 7.97 0 0 0 302 141v77.3c0 4.9 2.3 9.6 6.1 12.6l360 281.1-360 281.1c-3.9 3-6.1 7.7-6.1 12.6V883c0 6.7 7.7 10.4 12.9 6.3l450.8-352.1a31.96 31.96 0 0 0 0-50.4z">
-                      </path>
-                    </svg></button></div>
-              </div>
-            </div>
-          </div>
-          <div class="flex items-center px-5 py-12 md:px-32 relative">
-            <div class="flex flex-col gap-y-4 lg:gap-y-0 xl:gap-y-4 mt-3 xl:mt-2 lg:ml-8 lg:absolute lg:z-1">
-              <div class="text-xl lg:text-2xl xl:text-3xl font-bold text-[#324f76]">Why Choose Kitmeer?</div>
-              <div class="lg:w-1/2 text-md lg:text-xl xl:text-3xl text-[#324f76]">The ultimate engineering / science
-                education provider...</div>
-              <div class="lg:w-1/2 text-[#324f76] md:text-sm">Kitmeer has been supplying products to educational
-                institutes worldwide for over 20 years. With over 500 products in various disciplines, we are here to
-                serve your engineering / science education needs.</div>
-              <div class="flex xl:justify-center items-center relative">
-                <div
-                  class="flex mt-0 lg:mt-32 xl:-mt-4 2xl:mt-0 justify-center items-center absolute 2xl:relative cursor-pointer">
-                  <div class="ml-4 2xl:text-lg font-bold text-[#324f76]">Read More</div>
-                  <div><svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg"
-                      class="h-6 w-6 ml-2 text-[#324f76]">
-                      <path
-                        d="M6.1584 3.13508C6.35985 2.94621 6.67627 2.95642 6.86514 3.15788L10.6151 7.15788C10.7954 7.3502 10.7954 7.64949 10.6151 7.84182L6.86514 11.8418C6.67627 12.0433 6.35985 12.0535 6.1584 11.8646C5.95694 11.6757 5.94673 11.3593 6.1356 11.1579L9.565 7.49985L6.1356 3.84182C5.94673 3.64036 5.95694 3.32394 6.1584 3.13508Z"
-                        fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"></path>
-                    </svg></div>
-                <!-- </div><img src="images/home/landing_banner.webp" alt="banner" -->
-                  class="w-full lg:hidden block rounded-xl shadow-xl" />
-              </div>
-            </div><img src="images/home/landing_banner.webp" alt="banner"
-              class="w-full hidden lg:block rounded-xl shadow-xl" />
-          </div>
-          <div class="h-16"></div>
         </div>
-        <footer class="p-4 rounded-t-2xl shadow md:px-6 md:py-8 bg-gray-900 mt-auto">
-          <div class="grid lg:grid-cols-3 w-full gap-8"><a href="home.html" class="flex items-center justify-between">
-              <div class="lg:hidden block"></div><img alt="Flowbite Logo" src="images/navbar-footer/logo_whitec8f2.png"
-                width="309" height="105" decoding="async" data-nimg="future" class="h-16 w-auto" loading="lazy"
-                style="color:transparent" />
-              <div></div>
-            </a>
-            <ul
-              class="flex flex-col lg:flex-row justify-center items-left lg:items-center mb-6 text-sm text-gray-500 sm:mb-0 dark:text-gray-400 mx-auto">
-              <li><a class="mr-4 hover:underline text-center text-xl font-semibold md:mr-6 " href="index.html">Home</a>
-              </li>
-              <li><a class="mr-4 hover:underline text-center text-xl font-semibold md:mr-6 " href="about.html">About</a>
-              </li>
-              <li><a class="mr-4 hover:underline text-center text-xl font-semibold md:mr-6" href="products">All
-                  Products</a></li>
-              <li><a class="hover:underline text-center text-xl font-semibold" href="contact.html">Contact</a></li>
-            </ul><span
-              class="items-center justify-between flex text-sm text-gray-500 sm:text-center dark:text-gray-400">
-              <div></div>
-              <div>© 2022<!-- --> <a href="index.html" class="hover:underline ml-1">Kitmeer™</a>. All Rights Reserved.
-              </div>
-              <div class="lg:hidden block"></div>
-            </span>
+
+        <!-- Swiper Slider Section -->
+        <div class="xl:ml-[20%] mt-4 md:mt-8 xl:-mt-28 w-auto overflow-hidden">
+            <div class="overflow-hidden">
+                <div class="hidden xl:block xl:w-[95%] minislides p-1 lg:p-5 h-96 xl:h-64">
+                    <div class="swiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide" data-swiper-slide-index="0">
+                                <div class="rounded-xl xl:h-32 w-full flex bg-slate-100 flex-col xl:flex-row p-2">
+                                    <img class="object-center object-cover pointer-events-none rounded-xl xl:w-1/2 h-28" 
+                                        src="images/home/industrial-sector.jpg" alt="Industrial Sector Solutions" />
+                                    <div class="flex justify-between items-center m-4 font-bold flex-col text-sm">
+                                        <p>Industrial Sector Solutions</p>
+                                        <button class="text-xs text-blue-500 font-medium">Read More</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide" data-swiper-slide-index="1">
+                                <div class="rounded-xl xl:h-32 w-full flex bg-slate-100 flex-col xl:flex-row p-2">
+                                    <img class="object-center object-cover pointer-events-none rounded-xl xl:w-1/2 h-28" 
+                                        src="images/home/product-sol.png" alt="Products and Solutions" />
+                                    <div class="flex justify-between items-center m-4 font-bold flex-col text-sm">
+                                        <p>Products and Solutions</p>
+                                        <button class="text-xs text-blue-500 font-medium">Read More</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide" data-swiper-slide-index="2">
+                                <div class="rounded-xl xl:h-32 w-full flex bg-slate-100 flex-col xl:flex-row p-2">
+                                    <img class="object-center object-cover pointer-events-none rounded-xl xl:w-1/2 h-28" 
+                                        src="images/home/landing_bg.jpg" alt="Vocational" />
+                                    <div class="flex justify-between items-center m-4 font-bold flex-col text-sm">
+                                        <p>Vocational</p>
+                                        <button class="text-xs text-blue-500 font-medium">Read More</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide" data-swiper-slide-index="3">
+                                <div class="rounded-xl xl:h-32 w-full flex bg-slate-100 flex-col xl:flex-row p-2">
+                                    <img class="object-center object-cover pointer-events-none rounded-xl xl:w-1/2 h-28" 
+                                        src="images/home/university.jpg" alt="University" />
+                                    <div class="flex justify-between items-center m-4 font-bold flex-col text-sm">
+                                        <p>University</p>
+                                        <button class="text-xs text-blue-500 font-medium">Read More</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide" data-swiper-slide-index="4">
+                                <div class="rounded-xl xl:h-32 w-full flex bg-slate-100 flex-col xl:flex-row p-2">
+                                    <img class="object-center object-cover pointer-events-none rounded-xl xl:w-1/2 h-28" 
+                                        src="images/home/school.jpg" alt="School" />
+                                    <div class="flex justify-between items-center m-4 font-bold flex-col text-sm">
+                                        <p>School</p>
+                                        <button class="text-xs text-blue-500 font-medium">Read More</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Add Navigation Buttons -->
+
+                        <div class="swiper-button-prev">
+                            <svg width="60" height="60" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="40" cy="40" r="40" fill="#5EA9FB" />
+                                <path d="M45 25 L30 40 L45 55" stroke="white" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <div class="swiper-button-next">
+                            <svg width="60" height="60" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="40" cy="40" r="40" fill="#5EA9FB" />
+                                <path d="M35 25 L50 40 L35 55" stroke="white" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                    </div>
+               
+                </div>
+               
+            </div>
+        </div>
+        <div class="m-5 md:-mt-36 xl:-mt-20 p-5 md:px-32">
+          <h1 class="text-4xl font-bold mb-4">The Best in STEM education</h1>
+          <p class="text-md font-semibold">Here at Kitmeer we pride ourselves on being the best in the<span
+              class="italic font-bold"> STEM education field</span>, offering hundreds of specifically curated
+            products in order to match the needs of your students. Explore our website to learn more about the
+            solutions we offer or simply get in touch with us directly to know more!</p>
+          <div class="w-full flex justify-center flex-col items-center mt-12 cursor-pointer">
+            <div class="text-xl font-bold">View All Products</div>
+            <div><svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg"
+                class="w-8 h-8 -mt-2">
+                <path
+                  d="M3.13523 6.15803C3.3241 5.95657 3.64052 5.94637 3.84197 6.13523L7.5 9.56464L11.158 6.13523C11.3595 5.94637 11.6759 5.95657 11.8648 6.15803C12.0536 6.35949 12.0434 6.67591 11.842 6.86477L7.84197 10.6148C7.64964 10.7951 7.35036 10.7951 7.15803 10.6148L3.15803 6.86477C2.95657 6.67591 2.94637 6.35949 3.13523 6.15803Z"
+                  fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"></path>
+              </svg></div>
           </div>
-        </footer>
+        </div>
       </div>
+      <div class="w-full p-5 lg:px-32">
+        <div
+          class="w-full md:h-32 rounded-xl flex justify-evenly border-2 border-black shadow-xl flex-col md:flex-row py-8 md:py-0 bg-white">
+          <div class="h-full flex justify-center items-center md:w-1/3">
+            <div class="flex flex-col justify-center items-center">
+              <p class="text-2xl font-light">Clients</p>
+              <p class="text-3xl font-bold">500<!-- -->+</p>
+              <p class="text-sm font-bold text-center">Worldwide</p>
+            </div>
+          </div>
+          <div class="h-[3px] w-2/3 mx-auto my-6 bg-black rounded-full md:hidden"></div>
+          <div class="h-full flex justify-center items-center md:w-1/3">
+            <div class="flex flex-col justify-center items-center">
+              <p class="text-2xl font-light">Products</p>
+              <p class="text-3xl font-bold">800<!-- -->+</p>
+              <p class="text-sm font-bold text-center">for all education levels</p>
+            </div>
+          </div>
+          <div class="h-[3px] w-2/3 mx-auto my-6 bg-black rounded-full md:hidden"></div>
+          <div class="h-full flex justify-center items-center md:w-1/3">
+            <div class="flex flex-col justify-center items-center">
+              <p class="text-2xl font-light">Disciplines</p>
+              <p class="text-3xl font-bold">20<!-- -->+</p>
+              <p class="text-sm font-bold text-center">different fields</p>
+            </div>
+          </div>
+          <div class="absolute w-full justify-evenly h-32 hidden md:flex">
+            <div class="w-[3px] h-20 my-6 bg-black rounded-full"></div>
+            <div class="w-[3px] h-20 my-6 bg-black rounded-full"></div>
+          </div>
+        </div>
+      </div>
+      <div class="px-5 py-12 md:px-32">
+          <h1 class="text-4xl font-bold mb-4 text-center md:text-left">Kitmeer Latest News</h1>
+          <div class="carousel-container relative">
+              <div class="swiper news-carousel">
+                  <div class="swiper-wrapper">
+                      <!-- Slide 1 -->
+                      <div class="swiper-slide ">
+                          <div class="bg-black/80 p-8 rounded-xl">
+                              <h3 class="text-white text-xl font-semibold mb-2">How do I send a catalogue?</h3>
+                              <p class="text-white text-lg mb-4">Share information about our offerings with one easy click.</p>
+                              <p class="text-gray-300 text-sm">2023-11-01</p>
+                              <button class="mt-4 px-6 py-2 bg-blue-600 text-white font-bold rounded-xl hover:bg-blue-700 transition-colors">
+                                  Read More
+                              </button>
+                          </div>
+                      </div>
+  
+                      <!-- Slide 2 -->
+                      <div class="swiper-slide">
+                          <div class="bg-black/80 p-8 rounded-xl">
+                              <h3 class="text-white text-xl font-semibold mb-2">Contact Us!</h3>
+                              <p class="text-white text-lg mb-4">Contact us with your requested items or just with a simple question!</p>
+                              <p class="text-gray-300 text-sm">2022-11-02</p>
+                              <button class="mt-4 px-6 py-2 bg-blue-600 text-white font-bold rounded-xl hover:bg-blue-700 transition-colors">
+                                  Read More
+                              </button>
+                          </div>
+                      </div>
+  
+                      <!-- Slide 3 -->
+                      <div class="swiper-slide">
+                          <div class="bg-black/80 p-8 rounded-xl">
+                              <h3 class="text-white text-xl font-semibold mb-2">Welcome to Kitmeer!</h3>
+                              <p class="text-white text-lg mb-4">The one stop shop for all education needs in the world of engineering and science.</p>
+                              <p class="text-gray-300 text-sm">2022-11-01</p>
+                              <button class="mt-4 px-6 py-2 bg-blue-600 text-white font-bold rounded-xl hover:bg-blue-700 transition-colors">
+                                  Read More
+                              </button>
+                          </div>
+                      </div>
+                  </div>
+  
+                  <!-- Navigation Buttons -->
+                  <div class="swiper-button-prev">
+                      <svg width="40" height="40" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+                          <circle cx="40" cy="40" r="40" fill="#5EA9FB"/>
+                          <path d="M45 25 L30 40 L45 55" stroke="white" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>
+                  </div>
+                  <div class="swiper-button-next">
+                      <svg width="40" height="40" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+                          <circle cx="40" cy="40" r="40" fill="#5EA9FB"/>
+                          <path d="M35 25 L50 40 L35 55" stroke="white" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>
+                  </div>
+  
+                  <!-- Pagination -->
+                  <div class="swiper-pagination"></div>
+              </div>
+          </div>
+      </div>
+      <div class="flex items-center px-5 py-12 md:px-32 relative">
+        <div class="flex flex-col gap-y-4 lg:gap-y-0 xl:gap-y-4 mt-3 xl:mt-2 lg:ml-8 lg:absolute lg:z-1">
+          <div class="text-xl lg:text-2xl xl:text-3xl font-bold text-[#324f76]">Why Choose Kitmeer?</div>
+          <div class="lg:w-1/2 text-md lg:text-xl xl:text-3xl text-[#324f76]">The ultimate engineering / science
+            education provider...</div>
+          <div class="lg:w-1/2 text-[#324f76] md:text-sm">Kitmeer has been supplying products to educational
+            institutes worldwide for over 20 years. With over 500 products in various disciplines, we are here to
+            serve your engineering / science education needs.</div>
+          <div class="flex xl:justify-center items-center relative">
+            <div
+              class="flex mt-0 lg:mt-32 xl:-mt-4 2xl:mt-0 justify-center items-center absolute 2xl:relative cursor-pointer">
+              <div class="ml-4 2xl:text-lg font-bold text-[#324f76]">Read More</div>
+              <div><svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg"
+                  class="h-6 w-6 ml-2 text-[#324f76]">
+                  <path
+                    d="M6.1584 3.13508C6.35985 2.94621 6.67627 2.95642 6.86514 3.15788L10.6151 7.15788C10.7954 7.3502 10.7954 7.64949 10.6151 7.84182L6.86514 11.8418C6.67627 12.0433 6.35985 12.0535 6.1584 11.8646C5.95694 11.6757 5.94673 11.3593 6.1356 11.1579L9.565 7.49985L6.1356 3.84182C5.94673 3.64036 5.95694 3.32394 6.1584 3.13508Z"
+                    fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"></path>
+                </svg></div>
+            </div><img src="image/home/landing_banner.webp" alt="banner"
+              class="w-full lg:hidden block rounded-xl shadow-xl" />
+          </div>
+        </div><img src="image/home/landing_banner.webp" alt="banner" class="w-full hidden lg:block rounded-xl shadow-xl" />
+      </div>
+      <div class="h-16"></div>
+    </div>
+        <!-- Footer -->
+        <footer class="p-4 rounded-t-2xl shadow md:px-6 md:py-8 bg-gray-900 mt-auto">
+            <div class="grid lg:grid-cols-3 w-full gap-8">
+                <a href="index.html" class="flex items-center justify-between">
+                    <div class="lg:hidden block"></div>
+                    <img alt="Kitmeer Logo" src="images/navbar-footer/logo_whitec8f2.png" class="h-16 w-auto">
+                    <div></div>
+                </a>
+                <ul class="flex flex-col lg:flex-row justify-center items-left lg:items-center mb-6 text-sm text-gray-500 sm:mb-0 dark:text-gray-400 mx-auto">
+                    <li><a class="mr-4 hover:underline text-center text-xl font-semibold md:mr-6" href="index.html">Home</a></li>
+                    <li><a class="mr-4 hover:underline text-center text-xl font-semibold md:mr-6" href="about">About</a></li>
+                    <li><a class="mr-4 hover:underline text-center text-xl font-semibold md:mr-6" href="products">All Products</a></li>
+                    <li><a class="hover:underline text-center text-xl font-semibold" href="contact">Contact</a></li>
+                </ul>
+                <span class="items-center justify-between flex text-sm text-gray-500 sm:text-center dark:text-gray-400">
+                    <div></div>
+                    <div>© 2022 <a href="index.html" class="hover:underline ml-1">Kitmeer™</a>. All Rights Reserved.</div>
+                    <div class="lg:hidden block"></div>
+                </span>
+            </div>
+        </footer>
+    </div>
+
+    <script src="js/home.js"></script>
+</body>
+</html>
