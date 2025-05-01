@@ -1,9 +1,29 @@
-// Mobile menu functionality
-const mobileMenuBtn = document.getElementById('mobileMenuBtn');
-const navLinks = document.querySelector('.navlinks');
+document.addEventListener('DOMContentLoaded', () => { 
+    // Mobile menu functionality 
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn'); 
+    const mobileNavLinks = document.querySelector('.mobile-navlinks'); 
+    const burgerIcon = mobileMenuBtn.querySelector('svg:not(#closeIcon)'); 
+    const closeIcon = document.getElementById('closeIcon'); 
 
-mobileMenuBtn.addEventListener('click', () => {
-    navLinks.classList.toggle('hidden');
+    mobileMenuBtn.addEventListener('click', (e) => { 
+        e.stopPropagation(); 
+        mobileNavLinks.classList.toggle('hidden'); 
+        
+        // Toggle between burger and close icons 
+        burgerIcon.classList.toggle('hidden'); 
+        closeIcon.classList.toggle('hidden'); 
+    }); 
+
+    // Close menu when clicking outside 
+    document.addEventListener('click', (event) => { 
+        if (!mobileNavLinks.contains(event.target) && !mobileMenuBtn.contains(event.target)) { 
+            mobileNavLinks.classList.add('hidden'); 
+            
+            // Ensure burger icon is visible and close icon is hidden 
+            burgerIcon.classList.remove('hidden'); 
+            closeIcon.classList.add('hidden'); 
+        } 
+    }); 
 });
 
 // Progress Bar
