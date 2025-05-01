@@ -1,9 +1,19 @@
-// Mobile menu functionality
-const mobileMenuBtn = document.getElementById('mobileMenuBtn');
-const navLinks = document.querySelector('.navlinks');
+document.addEventListener('DOMContentLoaded', () => {
+    // Mobile menu functionality
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const mobileNavLinks = document.querySelector('.mobile-navlinks');
 
-mobileMenuBtn.addEventListener('click', () => {
-    navLinks.classList.toggle('hidden');
+    mobileMenuBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        mobileNavLinks.classList.toggle('hidden');
+    });
+
+    // Close menu when clicking outside
+    document.addEventListener('click', (event) => {
+        if (!mobileNavLinks.contains(event.target) && !mobileMenuBtn.contains(event.target)) {
+            mobileNavLinks.classList.add('hidden');
+        }
+    });
 });
 
 // Progress Bar
@@ -77,4 +87,5 @@ const newsCarousel = new Swiper('.news-carousel', {
             spaceBetween: 30
         }
     }
+    
 });
