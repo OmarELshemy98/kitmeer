@@ -1,0 +1,1141 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width" />
+  <title>Products - Kitmeer</title>
+  <meta name="description" content="Kitmeer">
+  <link rel="icon" href="images/favicon.ico">
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/products.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+</head>
+
+<body>
+  <div id="app">
+    <div class="navbar-wrapper">
+        <div class="spacer bg-transparent"></div>
+        <div class="navbar grid grid-cols-3 lg:grid-cols-5 items-center md:px-8 py-4 bg-transparent w-full">
+            <!-- Mobile Menu Button -->
+            <div class="lg:hidden mr-4 relative">
+                <button id="mobileMenuBtn" class="flex justify-center items-center mx-4">
+                    <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24"
+                        class="h-12 w-12 bg-slate-800 p-3 text-white rounded-md" height="1em" width="1em">
+                        <path
+                            d="M2 5.99519C2 5.44556 2.44556 5 2.99519 5H11.0048C11.5544 5 12 5.44556 12 5.99519C12 6.54482 11.5544 6.99039 11.0048 6.99039H2.99519C2.44556 6.99039 2 6.54482 2 5.99519Z"
+                            fill="currentColor"></path>
+                        <path
+                            d="M2 11.9998C2 11.4501 2.44556 11.0046 2.99519 11.0046H21.0048C21.5544 11.0046 22 11.4501 22 11.9998C22 12.5494 21.5544 12.9949 21.0048 12.9949H2.99519C2.44556 12.9949 2 12.5494 2 11.9998Z"
+                            fill="currentColor"></path>
+                        <path
+                            d="M2.99519 17.0096C2.44556 17.0096 2 17.4552 2 18.0048C2 18.5544 2.44556 19 2.99519 19H15.0048C15.5544 19 16 18.5544 16 18.0048C16 17.4552 15.5544 17.0096 15.0048 17.0096H2.99519Z"
+                            fill="currentColor"></path>
+                    </svg>
+                    <!-- close icon -->
+                    <svg id="closeIcon" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 hidden" fill="none"
+                        viewBox="0 0 24 24" stroke="currentColor">
+                        <path
+                            d="M12.8536 2.85355C13.0488 2.65829 13.0488 2.34171 12.8536 2.14645C12.6583 1.95118 12.3417 1.95118 12.1464 2.14645L7.5 6.79289L2.85355 2.14645C2.65829 1.95118 2.34171 1.95118 2.14645 2.14645C1.95118 2.34171 1.95118 2.65829 2.14645 2.85355L6.79289 7.5L2.14645 12.1464C1.95118 12.3417 1.95118 12.6583 2.14645 12.8536C2.34171 13.0488 2.65829 13.0488 2.85355 12.8536L7.5 8.20711L12.1464 12.8536C12.3417 13.0488 12.6583 13.0488 12.8536 12.8536C13.0488 12.6583 13.0488 12.3417 12.8536 12.1464L8.20711 7.5L12.8536 2.85355Z"
+                            fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"></path>
+                    </svg>
+                </button>
+                <!-- Dropdown Menu -->
+                <div
+                    class="mobile-navlinks hidden absolute top-full left-0 bg-white rounded-xl shadow-lg p-4 w-56 mt-2 z-50">
+                    <ul class="flex flex-col space-y-4 text-gray-800 font-semibold">
+                        <li class="flex items-center gap-2">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M7.07926 0.222253C7.31275 -0.007434 7.6873 -0.007434 7.92079 0.222253L14.6708 6.86227C14.907 7.09465 14.9101 7.47453 14.6778 7.71076C14.4454 7.947 14.0655 7.95012 13.8293 7.71773L13 6.90201V12.5C13 12.7761 12.7762 13 12.5 13H2.50002C2.22388 13 2.00002 12.7761 2.00002 12.5V6.90201L1.17079 7.71773C0.934558 7.95012 0.554672 7.947 0.32229 7.71076C0.0899079 7.47453 0.0930283 7.09465 0.32926 6.86227L7.07926 0.222253ZM7.50002 1.49163L12 5.91831V12H10V8.49999C10 8.22385 9.77617 7.99999 9.50002 7.99999H6.50002C6.22388 7.99999 6.00002 8.22385 6.00002 8.49999V12H3.00002V5.91831L7.50002 1.49163ZM7.00002 12H9.00002V8.99999H7.00002V12Z"
+                                    fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"></path>
+                            </svg>
+                            <a href="home.html">Home</a>
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <svg class="w-5 h-5" stroke="currentColor" viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M2.8 1L2.74967 0.99997C2.52122 0.999752 2.32429 0.999564 2.14983 1.04145C1.60136 1.17312 1.17312 1.60136 1.04145 2.14983C0.999564 2.32429 0.999752 2.52122 0.99997 2.74967L1 2.8V5.2L0.99997 5.25033C0.999752 5.47878 0.999564 5.67572 1.04145 5.85017C1.17312 6.39864 1.60136 6.82688 2.14983 6.95856C2.32429 7.00044 2.52122 7.00025 2.74967 7.00003L2.8 7H5.2L5.25033 7.00003C5.47878 7.00025 5.67572 7.00044 5.85017 6.95856C6.39864 6.82688 6.82688 6.39864 6.95856 5.85017C7.00044 5.67572 7.00025 5.47878 7.00003 5.25033L7 5.2V2.8L7.00003 2.74967C7.00025 2.52122 7.00044 2.32429 6.95856 2.14983C6.82688 1.60136 6.39864 1.17312 5.85017 1.04145C5.67572 0.999564 5.47878 0.999752 5.25033 0.99997L5.2 1H2.8ZM2.38328 2.01382C2.42632 2.00348 2.49222 2 2.8 2H5.2C5.50779 2 5.57369 2.00348 5.61672 2.01382C5.79955 2.05771 5.94229 2.20045 5.98619 2.38328C5.99652 2.42632 6 2.49222 6 2.8V5.2C6 5.50779 5.99652 5.57369 5.98619 5.61672C5.94229 5.79955 5.79955 5.94229 5.61672 5.98619C5.57369 5.99652 5.50779 6 5.2 6H2.8C2.49222 6 2.42632 5.99652 2.38328 5.98619C2.20045 5.94229 2.05771 5.79955 2.01382 5.61672C2.00348 5.57369 2 5.50779 2 5.2V2.8C2 2.49222 2.00348 2.42632 2.01382 2.38328C2.05771 2.20045 2.20045 2.05771 2.38328 2.01382ZM9.8 1L9.74967 0.99997C9.52122 0.999752 9.32429 0.999564 9.14983 1.04145C8.60136 1.17312 8.17312 1.60136 8.04145 2.14983C7.99956 2.32429 7.99975 2.52122 7.99997 2.74967L8 2.8V5.2L7.99997 5.25033C7.99975 5.47878 7.99956 5.67572 8.04145 5.85017C8.17312 6.39864 8.60136 6.82688 9.14983 6.95856C9.32429 7.00044 9.52122 7.00025 9.74967 7.00003L9.8 7H12.2L12.2503 7.00003C12.4788 7.00025 12.6757 7.00044 12.8502 6.95856C13.3986 6.82688 13.8269 6.39864 13.9586 5.85017C14.0004 5.67572 14.0003 5.47878 14 5.25033L14 5.2V2.8L14 2.74967C14.0003 2.52122 14.0004 2.32429 13.9586 2.14983C13.8269 1.60136 13.3986 1.17312 12.8502 1.04145C12.6757 0.999564 12.4788 0.999752 12.2503 0.99997L12.2 1H9.8ZM9.38328 2.01382C9.42632 2.00348 9.49222 2 9.8 2H12.2C12.5078 2 12.5737 2.00348 12.6167 2.01382C12.7995 2.05771 12.9423 2.20045 12.9862 2.38328C12.9965 2.42632 13 2.49222 13 2.8V5.2C13 5.50779 12.9965 5.57369 12.9862 5.61672C12.9423 5.79955 12.7995 5.94229 12.6167 5.98619C12.5737 5.99652 12.5078 6 12.2 6H9.8C9.49222 6 9.42632 5.99652 9.38328 5.98619C9.20045 5.94229 9.05771 5.79955 9.01382 5.61672C9.00348 5.57369 9 5.50779 9 5.2V2.8C9 2.49222 9.00348 2.42632 9.01382 2.38328C9.05771 2.20045 9.20045 2.05771 9.38328 2.01382ZM2.74967 7.99997L2.8 8H5.2L5.25033 7.99997C5.47878 7.99975 5.67572 7.99956 5.85017 8.04145C6.39864 8.17312 6.82688 8.60136 6.95856 9.14983C7.00044 9.32429 7.00025 9.52122 7.00003 9.74967L7 9.8V12.2L7.00003 12.2503C7.00025 12.4788 7.00044 12.6757 6.95856 12.8502C6.82688 13.3986 6.39864 13.8269 5.85017 13.9586C5.67572 14.0004 5.47878 14.0003 5.25033 14L5.2 14H2.8L2.74967 14C2.52122 14.0003 2.32429 14.0004 2.14983 13.9586C1.60136 13.8269 1.17312 13.3986 1.04145 12.8502C0.999564 12.6757 0.999752 12.4788 0.99997 12.2503L1 12.2V9.8L0.99997 9.74967C0.999752 9.52122 0.999564 9.32429 1.04145 9.14983C1.17312 8.60136 1.60136 8.17312 2.14983 8.04145C2.32429 7.99956 2.52122 7.99975 2.74967 7.99997ZM2.8 9C2.49222 9 2.42632 9.00348 2.38328 9.01382C2.20045 9.05771 2.05771 9.20045 2.01382 9.38328C2.00348 9.42632 2 9.49222 2 9.8V12.2C2 12.5078 2.00348 12.5737 2.01382 12.6167C2.05771 12.7995 2.20045 12.9423 2.38328 12.9862C2.42632 12.9965 2.49222 13 2.8 13H5.2C5.50779 13 5.57369 12.9965 5.61672 12.9862C5.79955 12.9423 5.94229 12.7995 5.98619 12.6167C5.99652 12.5737 6 12.5078 6 12.2V9.8C6 9.49222 5.99652 9.42632 5.98619 9.38328C5.94229 9.20045 5.79955 9.05771 5.61672 9.01382C5.57369 9.00348 5.50779 9 5.2 9H2.8ZM9.8 8L9.74967 7.99997C9.52122 7.99975 9.32429 7.99956 9.14983 8.04145C8.60136 8.17312 8.17312 8.60136 8.04145 9.14983C7.99956 9.32429 7.99975 9.52122 7.99997 9.74967L8 9.8V12.2L7.99997 12.2503C7.99975 12.4788 7.99956 12.6757 8.04145 12.8502C8.17312 13.3986 8.60136 13.8269 9.14983 13.9586C9.32429 14.0004 9.52122 14.0003 9.74967 14L9.8 14H12.2L12.2503 14C12.4788 14.0003 12.6757 14.0004 12.8502 13.9586C13.3986 13.8269 13.8269 13.3986 13.9586 12.8502C14.0004 12.6757 14.0003 12.4788 14 12.2503L14 12.2V9.8L14 9.74967C14.0003 9.52122 14.0004 9.32429 13.9586 9.14983C13.8269 8.60136 13.3986 8.17312 12.8502 8.04145C12.6757 7.99956 12.4788 7.99975 12.2503 7.99997L12.2 8H9.8ZM9.38328 9.01382C9.42632 9.00348 9.49222 9 9.8 9H12.2C12.5078 9 12.5737 9.00348 12.6167 9.01382C12.7995 9.05771 12.9423 9.20045 12.9862 9.38328C12.9965 9.42632 13 9.49222 13 9.8V12.2C13 12.5078 12.9965 12.5737 12.9862 12.6167C12.9423 12.7995 12.7995 12.9423 12.6167 12.9862C12.5737 12.9965 12.5078 13 12.2 13H9.8C9.49222 13 9.42632 12.9965 9.38328 12.9862C9.20045 12.9423 9.05771 12.7995 9.01382 12.6167C9.00348 12.5737 9 12.5078 9 12.2V9.8C9 9.49222 9.00348 9.42632 9.01382 9.38328C9.05771 9.20045 9.20045 9.05771 9.38328 9.01382Z"
+                                    fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"></path>
+                            </svg>
+                            <a href="#">Categories</a>
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M1.5 5.25C1.91421 5.25 2.25 4.91421 2.25 4.5C2.25 4.08579 1.91421 3.75 1.5 3.75C1.08579 3.75 0.75 4.08579 0.75 4.5C0.75 4.91421 1.08579 5.25 1.5 5.25ZM4 4.5C4 4.22386 4.22386 4 4.5 4H13.5C13.7761 4 14 4.22386 14 4.5C14 4.77614 13.7761 5 13.5 5H4.5C4.22386 5 4 4.77614 4 4.5ZM4.5 7C4.22386 7 4 7.22386 4 7.5C4 7.77614 4.22386 8 4.5 8H13.5C13.7761 8 14 7.77614 14 7.5C14 7.22386 13.7761 7 13.5 7H4.5ZM4.5 10C4.22386 10 4 10.2239 4 10.5C4 10.7761 4.22386 11 4.5 11H13.5C13.7761 11 14 10.7761 14 10.5C14 10.2239 13.7761 10 13.5 10H4.5ZM2.25 7.5C2.25 7.91421 1.91421 8.25 1.5 8.25C1.08579 8.25 0.75 7.91421 0.75 7.5C0.75 7.08579 1.08579 6.75 1.5 6.75C1.91421 6.75 2.25 7.08579 2.25 7.5ZM1.5 11.25C1.91421 11.25 2.25 10.9142 2.25 10.5C2.25 10.0858 1.91421 9.75 1.5 9.75C1.08579 9.75 0.75 10.0858 0.75 10.5C0.75 10.9142 1.08579 11.25 1.5 11.25Z"
+                                    fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"></path>
+                            </svg>
+                            <a href="products.html">All Products</a>
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M0.877075 7.49972C0.877075 3.84204 3.84222 0.876892 7.49991 0.876892C11.1576 0.876892 14.1227 3.84204 14.1227 7.49972C14.1227 11.1574 11.1576 14.1226 7.49991 14.1226C3.84222 14.1226 0.877075 11.1574 0.877075 7.49972ZM7.49991 1.82689C4.36689 1.82689 1.82708 4.36671 1.82708 7.49972C1.82708 10.6327 4.36689 13.1726 7.49991 13.1726C10.6329 13.1726 13.1727 10.6327 13.1727 7.49972C13.1727 4.36671 10.6329 1.82689 7.49991 1.82689ZM8.24993 10.5C8.24993 10.9142 7.91414 11.25 7.49993 11.25C7.08571 11.25 6.74993 10.9142 6.74993 10.5C6.74993 10.0858 7.08571 9.75 7.49993 9.75C7.91414 9.75 8.24993 10.0858 8.24993 10.5ZM6.05003 6.25C6.05003 5.57211 6.63511 4.925 7.50003 4.925C8.36496 4.925 8.95003 5.57211 8.95003 6.25C8.95003 6.74118 8.68002 6.99212 8.21447 7.27494C8.16251 7.30651 8.10258 7.34131 8.03847 7.37854L8.03841 7.37858C7.85521 7.48497 7.63788 7.61119 7.47449 7.73849C7.23214 7.92732 6.95003 8.23198 6.95003 8.7C6.95004 9.00376 7.19628 9.25 7.50004 9.25C7.8024 9.25 8.04778 9.00601 8.05002 8.70417L8.05056 8.7033C8.05924 8.6896 8.08493 8.65735 8.15058 8.6062C8.25207 8.52712 8.36508 8.46163 8.51567 8.37436L8.51571 8.37433C8.59422 8.32883 8.68296 8.27741 8.78559 8.21506C9.32004 7.89038 10.05 7.35382 10.05 6.25C10.05 4.92789 8.93511 3.825 7.50003 3.825C6.06496 3.825 4.95003 4.92789 4.95003 6.25C4.95003 6.55376 5.19628 6.8 5.50003 6.8C5.80379 6.8 6.05003 6.55376 6.05003 6.25Z"
+                                    fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"></path> d="M8
+                                10h.01M12 10h.01M16 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                            </svg>
+                            <a href="about.html">About Us</a>
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M12.1464 1.14645C12.3417 0.951184 12.6583 0.951184 12.8535 1.14645L14.8535 3.14645C15.0488 3.34171 15.0488 3.65829 14.8535 3.85355L10.9109 7.79618C10.8349 7.87218 10.7471 7.93543 10.651 7.9835L6.72359 9.94721C6.53109 10.0435 6.29861 10.0057 6.14643 9.85355C5.99425 9.70137 5.95652 9.46889 6.05277 9.27639L8.01648 5.34897C8.06455 5.25283 8.1278 5.16507 8.2038 5.08907L12.1464 1.14645ZM12.5 2.20711L8.91091 5.79618L7.87266 7.87267L8.12731 8.12732L10.2038 7.08907L13.7929 3.5L12.5 2.20711ZM9.99998 2L8.99998 3H4.9C4.47171 3 4.18056 3.00039 3.95552 3.01877C3.73631 3.03668 3.62421 3.06915 3.54601 3.10899C3.35785 3.20487 3.20487 3.35785 3.10899 3.54601C3.06915 3.62421 3.03669 3.73631 3.01878 3.95552C3.00039 4.18056 3 4.47171 3 4.9V11.1C3 11.5283 3.00039 11.8194 3.01878 12.0445C3.03669 12.2637 3.06915 12.3758 3.10899 12.454C3.20487 12.6422 3.35785 12.7951 3.54601 12.891C3.62421 12.9309 3.73631 12.9633 3.95552 12.9812C4.18056 12.9996 4.47171 13 4.9 13H11.1C11.5283 13 11.8194 12.9996 12.0445 12.9812C12.2637 12.9633 12.3758 12.9309 12.454 12.891C12.6422 12.7951 12.7951 12.6422 12.891 12.454C12.9309 12.3758 12.9633 12.2637 12.9812 12.0445C12.9996 11.8194 13 11.5283 13 11.1V6.99998L14 5.99998V11.1V11.1207C14 11.5231 14 11.8553 13.9779 12.1259C13.9549 12.407 13.9057 12.6653 13.782 12.908C13.5903 13.2843 13.2843 13.5903 12.908 13.782C12.6653 13.9057 12.407 13.9549 12.1259 13.9779C11.8553 14 11.5231 14 11.1207 14H11.1H4.9H4.87934C4.47686 14 4.14468 14 3.87409 13.9779C3.59304 13.9549 3.33469 13.9057 3.09202 13.782C2.7157 13.5903 2.40973 13.2843 2.21799 12.908C2.09434 12.6653 2.04506 12.407 2.0221 12.1259C1.99999 11.8553 1.99999 11.5231 2 11.1207V11.1206V11.1V4.9V4.87935V4.87932V4.87931C1.99999 4.47685 1.99999 4.14468 2.0221 3.87409C2.04506 3.59304 2.09434 3.33469 2.21799 3.09202C2.40973 2.71569 2.7157 2.40973 3.09202 2.21799C3.33469 2.09434 3.59304 2.04506 3.87409 2.0221C4.14468 1.99999 4.47685 1.99999 4.87932 2H4.87935H4.9H9.99998Z"
+                                    fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"></path>
+                            </svg>
+                            <a href="contact.html">Contact Us</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Logo -->
+            <div class="logo cursor-pointer flex items-center justify-center">
+                <img alt="Kitmeer Logo" src="images/navbar-footer/logo_light.webp" class="lg:w-64 md:w-44 sm:w-32">
+            </div>
+
+            <!-- Mobile Navigation Links -->
+            <div class="mobile-navlinks hidden absolute top-full left-0 right-0 bg-white shadow-lg lg:hidden z-50">
+                <ul class="flex flex-col space-y-4 p-4">
+                    <li><a href="home.html"
+                            class="text-gray-800 hover:text-blue-800 text-lg font-semibold block">Home</a></li>
+                    <li><a href="products.html"
+                            class="text-gray-800 hover:text-blue-800 text-lg font-semibold block">All Products</a>
+                    </li>
+                    <li><a href="about.html"
+                            class="text-gray-800 hover:text-blue-800 text-lg font-semibold block">About Us</a></li>
+                    <li><a href="contact.html"
+                            class="text-gray-800 hover:text-blue-800 text-lg font-semibold block">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Desktop Navigation Links -->
+            <div class="navlinks col-span-3 hidden lg:flex w-full items-center justify-center">
+                <ul class="flex items-center text-center">
+                    <a class="sm:text-md md:text-lg lg:text-xl font-bold" href="home.html">
+                        <li class="group mx-4 list-none cursor-pointer hover:text-blue-800">
+                            Home
+                            <div class="w-full h-2 bg-transparent group-hover:bg-blue-400 rounded-full"></div>
+                        </li>
+                    </a>
+                    <div class="relative inline-block text-left">
+                        <button id="categoriesBtn" class="flex justify-center items-center dropdown">
+                            <div class="group mx-4 list-none cursor-pointer hover:text-blue-800">
+                                <div class="sm:text-md md:text-lg lg:text-xl font-bold">
+                                    Categories
+                                    <div class="w-full h-2 bg-transparent group-hover:bg-blue-400 rounded-full">
+                                    </div>
+                                </div>
+                            </div>
+                        </button>
+                    </div>
+                    <a class="sm:text-md md:text-lg lg:text-xl font-bold" href="products">
+                        <li class="group mx-4 list-none cursor-pointer hover:text-blue-800">
+                            All Products
+                            <div class="h-2 rounded-full bg-blue-400"></div>
+                        </li>
+                    </a>
+                    <a class="sm:text-md md:text-lg lg:text-xl font-bold" href="about.html">
+                        <li class="group mx-4 list-none cursor-pointer hover:text-blue-800">
+                            About Us
+                            <div class="w-full h-2 bg-transparent group-hover:bg-blue-400 rounded-full"></div>
+                        </li>
+                    </a>
+                    <a class="sm:text-md md:text-lg lg:text-xl font-bold" href="contact.html">
+                        <li class="group mx-4 list-none cursor-pointer hover:text-blue-800">
+                            Contact Us
+                            <div class="w-full h-2 bg-transparent group-hover:bg-blue-400 rounded-full"></div>
+                        </li>
+                    </a>
+                </ul>
+            </div>
+
+            <!-- Icons -->
+            <div class="icons flex items-center justify-end z-[999]">
+                <button type="button" class="mx-4 relative z-[999]">
+                    <div>
+                        <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 576 512"
+                            class="h-12 w-12 bg-slate-800 p-3 text-white rounded-md" height="1em" width="1em">
+                            <path
+                                d="M528.12 301.319l47.273-208C578.806 78.301 567.391 64 551.99 64H159.208l-9.166-44.81C147.758 8.021 137.93 0 126.529 0H24C10.745 0 0 10.745 0 24v16c0 13.255 10.745 24 24 24h69.883l70.248 343.435C147.325 417.1 136 435.222 136 456c0 30.928 25.072 56 56 56s56-25.072 56-56c0-15.674-6.447-29.835-16.824-40h209.647C430.447 426.165 424 440.326 424 456c0 30.928 25.072 56 56 56s56-25.072 56-56c0-22.172-12.888-41.332-31.579-50.405l5.517-24.276c3.413-15.018-8.002-29.319-23.403-29.319H218.117l-6.545-32h293.145c11.206 0 20.92-7.754 23.403-18.681z">
+                            </path>
+                        </svg>
+                    </div>
+                </button>
+                <a class="mr-4" href="products">
+                    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512"
+                        class="h-12 w-12 p-3 text-blue-900 border-blue-900 border-2 rounded-md" height="1em"
+                        width="1em">
+                        <path
+                            d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z">
+                        </path>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </div>
+      </div>
+      <div class="p-4 md:p-8 lg:px-32">
+        <div class="product-oval !fixed"></div>
+        <div class="w-full relative mb-8">
+          <div class="text-6xl font-bold mb-8 text-center" style="color:#295593">Find All Products</div>
+          <div class="flex w-full items-center gap-2 flex-col">
+            <div class="rounded-xl shadow-lg bg-gray-100 h-16 py-3 px-6 flex items-center justify-between w-full">
+              <input type="search" class="bg-gray-100 w-full focus:outline-none text-xl md:text-3xl" 
+                placeholder="Search in Products" /><svg stroke="currentColor" fill="none" stroke-width="0"
+                viewBox="0 0 24 24" class="pointer-events-none w-16 h-16 text-slate-500" height="1em" width="1em"
+                xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M18.319 14.4326C20.7628 11.2941 20.542 6.75347 17.6569 3.86829C14.5327 0.744098 9.46734 0.744098 6.34315 3.86829C3.21895 6.99249 3.21895 12.0578 6.34315 15.182C9.22833 18.0672 13.769 18.2879 16.9075 15.8442C16.921 15.8595 16.9351 15.8745 16.9497 15.8891L21.1924 20.1317C21.5829 20.5223 22.2161 20.5223 22.6066 20.1317C22.9971 19.7412 22.9971 19.1081 22.6066 18.7175L18.364 14.4749C18.3493 14.4603 18.3343 14.4462 18.319 14.4326ZM16.2426 5.28251C18.5858 7.62565 18.5858 11.4246 16.2426 13.7678C13.8995 16.1109 10.1005 16.1109 7.75736 13.7678C5.41421 11.4246 5.41421 7.62565 7.75736 5.28251C10.1005 2.93936 13.8995 2.93936 16.2426 5.28251Z"
+                  fill="currentColor"></path>
+              </svg></div>
+            <div class="md:w-[40%] w-full">
+              <!-- Start of converted section -->
+              <div class="relative box-border">
+                <!-- Removed style block and applied sr-only class -->
+                <span id="react-select-2-live-region" class="sr-only"></span>
+                <span aria-live="polite" aria-atomic="false" aria-relevant="additions text" class="sr-only"></span>
+                <!-- Applied Tailwind classes to the main control div -->
+                <div class="flex items-center bg-white border border-gray-300 rounded cursor-default flex-wrap justify-between min-h-[38px] relative transition-all duration-100 outline-none hover:border-gray-400 box-border">
+                  <!-- Applied Tailwind classes to the value container -->
+                  <div class="grid items-center flex-1 flex-wrap p-[2px_8px] relative overflow-hidden box-border">
+                    <!-- Applied Tailwind classes to the placeholder -->
+                    <div class="text-gray-500 col-start-1 col-end-3 row-start-1 row-end-2 mx-[2px] box-border" id="react-select-2-placeholder">Filter Products by Categories</div>
+                    <!-- Applied Tailwind classes to the input container -->
+                    <div class="m-[2px] py-[2px] text-gray-800 flex-auto inline-grid col-start-1 col-end-3 row-start-1 row-end-2 grid-cols-[0_min-content] box-border" data-value="">
+                      <!-- Applied Tailwind classes to the input -->
+                      <input class="text-inherit bg-transparent opacity-100 w-full col-start-2 row-start-1 min-w-[2px] border-0 m-0 outline-none p-0"
+                        autoCapitalize="none" autoComplete="off" autoCorrect="off" id="react-select-2-input"
+                        spellcheck="false" tabindex="0" type="text" aria-autocomplete="list" aria-expanded="false"
+                        aria-haspopup="true" role="combobox" aria-describedby="react-select-2-placeholder" value="" />
+                    </div>
+                  </div>
+                  <!-- Applied Tailwind classes to the indicators container -->
+                  <div class="flex items-center self-stretch flex-shrink-0 box-border">
+                    <!-- Applied Tailwind classes to the separator -->
+                    <span class="self-stretch bg-gray-300 my-2 w-px box-border"></span>
+                    <!-- Applied Tailwind classes to the dropdown indicator container -->
+                    <div class="text-gray-300 flex p-2 transition-colors duration-150 box-border hover:text-gray-400" aria-hidden="true">
+                      <!-- Applied Tailwind classes to the SVG icon -->
+                      <svg height="20" width="20" viewBox="0 0 20 20" aria-hidden="true" focusable="false"
+                        class="inline-block fill-current leading-none stroke-current stroke-0">
+                        <path
+                          d="M4.516 7.548c0.436-0.446 1.043-0.481 1.576 0l3.908 3.747 3.908-3.747c0.533-0.481 1.141-0.446 1.574 0 0.436 0.445 0.408 1.197 0 1.615-0.406 0.418-4.695 4.502-4.695 4.502-0.217 0.223-0.502 0.335-0.787 0.335s-0.57-0.112-0.789-0.335c0 0-4.287-4.084-4.695-4.502s-0.436-1.17 0-1.615z">
+                        </path>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- End of converted section -->
+            </div>
+          </div>
+        </div>
+
+        <!-- card -->
+        <div id="top"></div>
+        <div class="w-full gap-8 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4">
+          <div
+            class="w-full rounded-2xl shadow-lg flex flex-col gap-y-4 relative bg-white group cursor-pointer h-auto product-card">
+            <div class="p-4 flex flex-col gap-y-4 justify-between h-full"><a href="products/440.html">
+                <div class="w-full h-64"><img
+                    src="images/products/1.jpg"
+                    class="w-full h-full object-cover rounded-2xl shadow-xl group-hover:shadow-none duration-700 ease-in-out" />
+                </div>
+                <div class="h-full flex-1 flex flex-col justify-between mt-8">
+                  <div class="text-lg font-bold group-hover:hidden" style="color:#295593">Wound Rotor Motor Learning
+                    System 85-MT2D</div>
+                  <div class="text-lg font-bold hidden group-hover:block md:text-white">Wound Rotor Motor Learning
+                    System 85-MT2D</div>
+                </div>
+              </a><a href="products/440.html">
+                <div class="flex w-full justify-evenly flex-wrap">
+                  <div
+                    class="bg-[#212121] rounded-full text-xs overflow-ellipsis flex-nowrap py-1 px-2 m-1 text-white font-bold text-center group-hover:bg-[#21212155]">
+                    Electrical Engineering</div>
+                  <div
+                    class="bg-[#212121] rounded-full text-xs overflow-ellipsis flex-nowrap py-1 px-2 m-1 text-white font-bold text-center group-hover:bg-[#21212155]">
+                    Electrical Engineering and Electronics</div>
+                </div>
+              </a>
+              <div class="flex flex-col gap-y-4">
+                <div class="z-1">
+                  <div>
+                    <div
+                      class="w-full p-3 rounded-xl shadow-lg text-xl text-center font-bold text-white group-hover:hidden h-[65px] flex items-center justify-center"
+                      style="background:#295593">Add to Cart</div>
+                    <div
+                      class="w-full p-3 rounded-xl shadow-lg text-xl text-center font-bold bg-white hidden group-hover:flex h-[65px] items-center justify-center"
+                      style="color:#295593">Add to Cart</div>
+                  </div>
+                </div>
+                <div>
+                  <div class="flex items-center w-full justify-center"><a
+                      class="w-full text-md text-center font-bold group-hover:hidden" style="color:#295593"
+                      href="products/440.html">Read More</a><a
+                      class="w-full text-md text-center font-bold group-hover:block hidden md:text-white"
+                      href="products/440.html">Read More</a></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="w-full rounded-2xl shadow-lg flex flex-col gap-y-4 relative bg-white group cursor-pointer h-auto product-card">
+            <div class="p-4 flex flex-col gap-y-4 justify-between h-full"><a href="products/693.html">
+                <div class="w-full h-64"><img
+                    src="images/products/2.png"
+                    class="w-full h-full object-cover rounded-2xl shadow-xl group-hover:shadow-none duration-700 ease-in-out" />
+                </div>
+                <div class="h-full flex-1 flex flex-col justify-between mt-8">
+                  <div class="text-lg font-bold group-hover:hidden" style="color:#295593">Wire Harness Installation
+                    Training 950-WHS1</div>
+                  <div class="text-lg font-bold hidden group-hover:block md:text-white">Wire Harness Installation
+                    Training 950-WHS1</div>
+                </div>
+              </a><a href="products/693.html">
+                <div class="flex w-full justify-evenly flex-wrap">
+                  <div
+                    class="bg-[#212121] rounded-full text-xs overflow-ellipsis flex-nowrap py-1 px-2 m-1 text-white font-bold text-center group-hover:bg-[#21212155]">
+                    Mechanical Engineering</div>
+                </div>
+              </a>
+              <div class="flex flex-col gap-y-4">
+                <div class="z-1">
+                  <div>
+                    <div
+                      class="w-full p-3 rounded-xl shadow-lg text-xl text-center font-bold text-white group-hover:hidden h-[65px] flex items-center justify-center"
+                      style="background:#295593">Add to Cart</div>
+                    <div
+                      class="w-full p-3 rounded-xl shadow-lg text-xl text-center font-bold bg-white hidden group-hover:flex h-[65px] items-center justify-center"
+                      style="color:#295593">Add to Cart</div>
+                  </div>
+                </div>
+                <div>
+                  <div class="flex items-center w-full justify-center"><a
+                      class="w-full text-md text-center font-bold group-hover:hidden" style="color:#295593"
+                      href="products/693.html">Read More</a><a
+                      class="w-full text-md text-center font-bold group-hover:block hidden md:text-white"
+                      href="products/693.html">Read More</a></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="w-full rounded-2xl shadow-lg flex flex-col gap-y-4 relative bg-white group cursor-pointer h-auto product-card">
+            <div class="p-4 flex flex-col gap-y-4 justify-between h-full"><a href="products/341.html">
+                <div class="w-full h-64"><img src="images/products/3.jpg"
+                    class="w-full h-full object-cover rounded-2xl shadow-xl group-hover:shadow-none duration-700 ease-in-out" />
+                </div>
+                <div class="h-full flex-1 flex flex-col justify-between mt-8">
+                  <div class="text-lg font-bold group-hover:hidden" style="color:#295593">Welding Technology Learning
+                    System</div>
+                  <div class="text-lg font-bold hidden group-hover:block md:text-white">Welding Technology Learning
+                    System</div>
+                </div>
+              </a><a href="products/341.html">
+                <div class="flex w-full justify-evenly flex-wrap">
+                  <div
+                    class="bg-[#212121] rounded-full text-xs overflow-ellipsis flex-nowrap py-1 px-2 m-1 text-white font-bold text-center group-hover:bg-[#21212155]">
+                    Welding</div>
+                </div>
+              </a>
+              <div class="flex flex-col gap-y-4">
+                <div class="z-1">
+                  <div>
+                    <div
+                      class="w-full p-3 rounded-xl shadow-lg text-xl text-center font-bold text-white group-hover:hidden h-[65px] flex items-center justify-center"
+                      style="background:#295593">Add to Cart</div>
+                    <div
+                      class="w-full p-3 rounded-xl shadow-lg text-xl text-center font-bold bg-white hidden group-hover:flex h-[65px] items-center justify-center"
+                      style="color:#295593">Add to Cart</div>
+                  </div>
+                </div>
+                <div>
+                  <div class="flex items-center w-full justify-center"><a
+                      class="w-full text-md text-center font-bold group-hover:hidden" style="color:#295593"
+                      href="products/341.html">Read More</a><a
+                      class="w-full text-md text-center font-bold group-hover:block hidden md:text-white"
+                      href="products/341.html">Read More</a></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="w-full rounded-2xl shadow-lg flex flex-col gap-y-4 relative bg-white group cursor-pointer h-auto product-card">
+            <div class="p-4 flex flex-col gap-y-4 justify-between h-full"><a href="products/344.html">
+                <div class="w-full h-64"><img
+                    src="images/products/4.jpg"
+                    class="w-full h-full object-cover rounded-2xl shadow-xl group-hover:shadow-none duration-700 ease-in-out" />
+                </div>
+                <div class="h-full flex-1 flex flex-col justify-between mt-8">
+                  <div class="text-lg font-bold group-hover:hidden" style="color:#295593">Visualization Process Control
+                    1 Learning System T5552-S1</div>
+                  <div class="text-lg font-bold hidden group-hover:block md:text-white">Visualization Process Control 1
+                    Learning System T5552-S1</div>
+                </div>
+              </a><a href="products/344.html">
+                <div class="flex w-full justify-evenly flex-wrap">
+                  <div
+                    class="bg-[#212121] rounded-full text-xs overflow-ellipsis flex-nowrap py-1 px-2 m-1 text-white font-bold text-center group-hover:bg-[#21212155]">
+                    Process Control &amp; Instrumentation</div>
+                </div>
+              </a>
+              <div class="flex flex-col gap-y-4">
+                <div class="z-1">
+                  <div>
+                    <div
+                      class="w-full p-3 rounded-xl shadow-lg text-xl text-center font-bold text-white group-hover:hidden h-[65px] flex items-center justify-center"
+                      style="background:#295593">Add to Cart</div>
+                    <div
+                      class="w-full p-3 rounded-xl shadow-lg text-xl text-center font-bold bg-white hidden group-hover:flex h-[65px] items-center justify-center"
+                      style="color:#295593">Add to Cart</div>
+                  </div>
+                </div>
+                <div>
+                  <div class="flex items-center w-full justify-center"><a
+                      class="w-full text-md text-center font-bold group-hover:hidden" style="color:#295593"
+                      href="products/344.html">Read More</a><a
+                      class="w-full text-md text-center font-bold group-hover:block hidden md:text-white"
+                      href="products/344.html">Read More</a></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="w-full rounded-2xl shadow-lg flex flex-col gap-y-4 relative bg-white group cursor-pointer h-auto product-card">
+            <div class="p-4 flex flex-col gap-y-4 justify-between h-full"><a href="products/439.html">
+                <div class="w-full h-64"><img
+                    src="images/products/5.jpg"
+                    class="w-full h-full object-cover rounded-2xl shadow-xl group-hover:shadow-none duration-700 ease-in-out" />
+                </div>
+                <div class="h-full flex-1 flex flex-col justify-between mt-8">
+                  <div class="text-lg font-bold group-hover:hidden" style="color:#295593">Virtual Trainer Courseware -
+                    Electrical Motor Control N1740</div>
+                  <div class="text-lg font-bold hidden group-hover:block md:text-white">Virtual Trainer Courseware -
+                    Electrical Motor Control N1740</div>
+                </div>
+              </a><a href="products/439.html">
+                <div class="flex w-full justify-evenly flex-wrap">
+                  <div
+                    class="bg-[#212121] rounded-full text-xs overflow-ellipsis flex-nowrap py-1 px-2 m-1 text-white font-bold text-center group-hover:bg-[#21212155]">
+                    e-Learning</div>
+                </div>
+              </a>
+              <div class="flex flex-col gap-y-4">
+                <div class="z-1">
+                  <div>
+                    <div
+                      class="w-full p-3 rounded-xl shadow-lg text-xl text-center font-bold text-white group-hover:hidden h-[65px] flex items-center justify-center"
+                      style="background:#295593">Add to Cart</div>
+                    <div
+                      class="w-full p-3 rounded-xl shadow-lg text-xl text-center font-bold bg-white hidden group-hover:flex h-[65px] items-center justify-center"
+                      style="color:#295593">Add to Cart</div>
+                  </div>
+                </div>
+                <div>
+                  <div class="flex items-center w-full justify-center"><a
+                      class="w-full text-md text-center font-bold group-hover:hidden" style="color:#295593"
+                      href="products/439.html">Read More</a><a
+                      class="w-full text-md text-center font-bold group-hover:block hidden md:text-white"
+                      href="products/439.html">Read More</a></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="w-full rounded-2xl shadow-lg flex flex-col gap-y-4 relative bg-white group cursor-pointer h-auto product-card">
+            <div class="p-4 flex flex-col gap-y-4 justify-between h-full"><a href="products/438.html">
+                <div class="w-full h-64"><img
+                    src="images/products/6.png"
+                    class="w-full h-full object-cover rounded-2xl shadow-xl group-hover:shadow-none duration-700 ease-in-out" />
+                </div>
+                <div class="h-full flex-1 flex flex-col justify-between mt-8">
+                  <div class="text-lg font-bold group-hover:hidden" style="color:#295593">Virtual Trainer Courseware -
+                    AC DC Electrical NB227</div>
+                  <div class="text-lg font-bold hidden group-hover:block md:text-white">Virtual Trainer Courseware - AC
+                    DC Electrical NB227</div>
+                </div>
+              </a><a href="products/438.html">
+                <div class="flex w-full justify-evenly flex-wrap">
+                  <div
+                    class="bg-[#212121] rounded-full text-xs overflow-ellipsis flex-nowrap py-1 px-2 m-1 text-white font-bold text-center group-hover:bg-[#21212155]">
+                    e-Learning</div>
+                </div>
+              </a>
+              <div class="flex flex-col gap-y-4">
+                <div class="z-1">
+                  <div>
+                    <div
+                      class="w-full p-3 rounded-xl shadow-lg text-xl text-center font-bold text-white group-hover:hidden h-[65px] flex items-center justify-center"
+                      style="background:#295593">Add to Cart</div>
+                    <div
+                      class="w-full p-3 rounded-xl shadow-lg text-xl text-center font-bold bg-white hidden group-hover:flex h-[65px] items-center justify-center"
+                      style="color:#295593">Add to Cart</div>
+                  </div>
+                </div>
+                <div>
+                  <div class="flex items-center w-full justify-center"><a
+                      class="w-full text-md text-center font-bold group-hover:hidden" style="color:#295593"
+                      href="products/438.html">Read More</a><a
+                      class="w-full text-md text-center font-bold group-hover:block hidden md:text-white"
+                      href="products/438.html">Read More</a></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="w-full rounded-2xl shadow-lg flex flex-col gap-y-4 relative bg-white group cursor-pointer h-auto product-card">
+            <div class="p-4 flex flex-col gap-y-4 justify-between h-full"><a href="products/437.html">
+                <div class="w-full h-64"><img
+                    src="images/products/7.jpg"
+                    class="w-full h-full object-cover rounded-2xl shadow-xl group-hover:shadow-none duration-700 ease-in-out" />
+                </div>
+                <div class="h-full flex-1 flex flex-col justify-between mt-8">
+                  <div class="text-lg font-bold group-hover:hidden" style="color:#295593">Variable Frequency AC Drive
+                    Learning System 85-MT5C</div>
+                  <div class="text-lg font-bold hidden group-hover:block md:text-white">Variable Frequency AC Drive
+                    Learning System 85-MT5C</div>
+                </div>
+              </a><a href="products/437.html">
+                <div class="flex w-full justify-evenly flex-wrap">
+                  <div
+                    class="bg-[#212121] rounded-full text-xs overflow-ellipsis flex-nowrap py-1 px-2 m-1 text-white font-bold text-center group-hover:bg-[#21212155]">
+                    Electrical Engineering</div>
+                  <div
+                    class="bg-[#212121] rounded-full text-xs overflow-ellipsis flex-nowrap py-1 px-2 m-1 text-white font-bold text-center group-hover:bg-[#21212155]">
+                    Electrical Engineering and Electronics</div>
+                </div>
+              </a>
+              <div class="flex flex-col gap-y-4">
+                <div class="z-1">
+                  <div>
+                    <div
+                      class="w-full p-3 rounded-xl shadow-lg text-xl text-center font-bold text-white group-hover:hidden h-[65px] flex items-center justify-center"
+                      style="background:#295593">Add to Cart</div>
+                    <div
+                      class="w-full p-3 rounded-xl shadow-lg text-xl text-center font-bold bg-white hidden group-hover:flex h-[65px] items-center justify-center"
+                      style="color:#295593">Add to Cart</div>
+                  </div>
+                </div>
+                <div>
+                  <div class="flex items-center w-full justify-center"><a
+                      class="w-full text-md text-center font-bold group-hover:hidden" style="color:#295593"
+                      href="products/437.html">Read More</a><a
+                      class="w-full text-md text-center font-bold group-hover:block hidden md:text-white"
+                      href="products/437.html">Read More</a></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="w-full rounded-2xl shadow-lg flex flex-col gap-y-4 relative bg-white group cursor-pointer h-auto product-card">
+            <div class="p-4 flex flex-col gap-y-4 justify-between h-full"><a href="products/723.html">
+                <div class="w-full h-64"><img src="images/products/8.png"
+                    class="w-full h-full object-cover rounded-2xl shadow-xl group-hover:shadow-none duration-700 ease-in-out" />
+                </div>
+                <div class="h-full flex-1 flex flex-col justify-between mt-8">
+                  <div class="text-lg font-bold group-hover:hidden" style="color:#295593">Turbine Pump Training 95-PM1-B
+                  </div>
+                  <div class="text-lg font-bold hidden group-hover:block md:text-white">Turbine Pump Training 95-PM1-B
+                  </div>
+                </div>
+              </a><a href="products/723.html">
+                <div class="flex w-full justify-evenly flex-wrap">
+                  <div
+                    class="bg-[#212121] rounded-full text-xs overflow-ellipsis flex-nowrap py-1 px-2 m-1 text-white font-bold text-center group-hover:bg-[#21212155]">
+                    Pumps, Compressors &amp; Valves</div>
+                  <div
+                    class="bg-[#212121] rounded-full text-xs overflow-ellipsis flex-nowrap py-1 px-2 m-1 text-white font-bold text-center group-hover:bg-[#21212155]">
+                    Mechanical Engineering</div>
+                </div>
+              </a>
+              <div class="flex flex-col gap-y-4">
+                <div class="z-1">
+                  <div>
+                    <div
+                      class="w-full p-3 rounded-xl shadow-lg text-xl text-center font-bold text-white group-hover:hidden h-[65px] flex items-center justify-center"
+                      style="background:#295593">Add to Cart</div>
+                    <div
+                      class="w-full p-3 rounded-xl shadow-lg text-xl text-center font-bold bg-white hidden group-hover:flex h-[65px] items-center justify-center"
+                      style="color:#295593">Add to Cart</div>
+                  </div>
+                </div>
+                <div>
+                  <div class="flex items-center w-full justify-center"><a
+                      class="w-full text-md text-center font-bold group-hover:hidden" style="color:#295593"
+                      href="products/723.html">Read More</a><a
+                      class="w-full text-md text-center font-bold group-hover:block hidden md:text-white"
+                      href="products/723.html">Read More</a></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="w-full rounded-2xl shadow-lg flex flex-col gap-y-4 relative bg-white group cursor-pointer h-auto product-card">
+            <div class="p-4 flex flex-col gap-y-4 justify-between h-full"><a href="products/380.html">
+                <div class="w-full h-64"><img
+                    src="images/products/9.png"
+                    class="w-full h-full object-cover rounded-2xl shadow-xl group-hover:shadow-none duration-700 ease-in-out" />
+                </div>
+                <div class="h-full flex-1 flex flex-col justify-between mt-8">
+                  <div class="text-lg font-bold group-hover:hidden" style="color:#295593">Three-Channel Data Acquisition
+                    Training System T5553-R1A</div>
+                  <div class="text-lg font-bold hidden group-hover:block md:text-white">Three-Channel Data Acquisition
+                    Training System T5553-R1A</div>
+                </div>
+              </a><a href="products/380.html">
+                <div class="flex w-full justify-evenly flex-wrap">
+                  <div
+                    class="bg-[#212121] rounded-full text-xs overflow-ellipsis flex-nowrap py-1 px-2 m-1 text-white font-bold text-center group-hover:bg-[#21212155]">
+                    Process Control &amp; Instrumentation</div>
+                </div>
+              </a>
+              <div class="flex flex-col gap-y-4">
+                <div class="z-1">
+                  <div>
+                    <div
+                      class="w-full p-3 rounded-xl shadow-lg text-xl text-center font-bold text-white group-hover:hidden h-[65px] flex items-center justify-center"
+                      style="background:#295593">Add to Cart</div>
+                    <div
+                      class="w-full p-3 rounded-xl shadow-lg text-xl text-center font-bold bg-white hidden group-hover:flex h-[65px] items-center justify-center"
+                      style="color:#295593">Add to Cart</div>
+                  </div>
+                </div>
+                <div>
+                  <div class="flex items-center w-full justify-center"><a
+                      class="w-full text-md text-center font-bold group-hover:hidden" style="color:#295593"
+                      href="products/380.html">Read More</a><a
+                      class="w-full text-md text-center font-bold group-hover:block hidden md:text-white"
+                      href="products/380.html">Read More</a></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="w-full rounded-2xl shadow-lg flex flex-col gap-y-4 relative bg-white group cursor-pointer h-auto product-card">
+            <div class="p-4 flex flex-col gap-y-4 justify-between h-full"><a href="products/378.html">
+                <div class="w-full h-64"><img
+                    src="images/products/10.jpg"
+                    class="w-full h-full object-cover rounded-2xl shadow-xl group-hover:shadow-none duration-700 ease-in-out" />
+                </div>
+                <div class="h-full flex-1 flex flex-col justify-between mt-8">
+                  <div class="text-lg font-bold group-hover:hidden" style="color:#295593">Three-Channel Data Acquisition
+                    Learning System T5554-R1A</div>
+                  <div class="text-lg font-bold hidden group-hover:block md:text-white">Three-Channel Data Acquisition
+                    Learning System T5554-R1A</div>
+                </div>
+              </a><a href="products/378.html">
+                <div class="flex w-full justify-evenly flex-wrap">
+                  <div
+                    class="bg-[#212121] rounded-full text-xs overflow-ellipsis flex-nowrap py-1 px-2 m-1 text-white font-bold text-center group-hover:bg-[#21212155]">
+                    Process Control &amp; Instrumentation</div>
+                </div>
+              </a>
+              <div class="flex flex-col gap-y-4">
+                <div class="z-1">
+                  <div>
+                    <div
+                      class="w-full p-3 rounded-xl shadow-lg text-xl text-center font-bold text-white group-hover:hidden h-[65px] flex items-center justify-center"
+                      style="background:#295593">Add to Cart</div>
+                    <div
+                      class="w-full p-3 rounded-xl shadow-lg text-xl text-center font-bold bg-white hidden group-hover:flex h-[65px] items-center justify-center"
+                      style="color:#295593">Add to Cart</div>
+                  </div>
+                </div>
+                <div>
+                  <div class="flex items-center w-full justify-center"><a
+                      class="w-full text-md text-center font-bold group-hover:hidden" style="color:#295593"
+                      href="products/378.html">Read More</a><a
+                      class="w-full text-md text-center font-bold group-hover:block hidden md:text-white"
+                      href="products/378.html">Read More</a></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="w-full rounded-2xl shadow-lg flex flex-col gap-y-4 relative bg-white group cursor-pointer h-auto product-card">
+            <div class="p-4 flex flex-col gap-y-4 justify-between h-full"><a href="products/685.html">
+                <div class="w-full h-64"><img
+                    src="images/products/11.png"
+                    class="w-full h-full object-cover rounded-2xl shadow-xl group-hover:shadow-none duration-700 ease-in-out" />
+                </div>
+                <div class="h-full flex-1 flex flex-col justify-between mt-8">
+                  <div class="text-lg font-bold group-hover:hidden" style="color:#295593">Thermal Technology Training
+                    96-TT1</div>
+                  <div class="text-lg font-bold hidden group-hover:block md:text-white">Thermal Technology Training
+                    96-TT1</div>
+                </div>
+              </a><a href="products/685.html">
+                <div class="flex w-full justify-evenly flex-wrap">
+                  <div
+                    class="bg-[#212121] rounded-full text-xs overflow-ellipsis flex-nowrap py-1 px-2 m-1 text-white font-bold text-center group-hover:bg-[#21212155]">
+                    HVAC</div>
+                  <div
+                    class="bg-[#212121] rounded-full text-xs overflow-ellipsis flex-nowrap py-1 px-2 m-1 text-white font-bold text-center group-hover:bg-[#21212155]">
+                    Construction</div>
+                </div>
+              </a>
+              <div class="flex flex-col gap-y-4">
+                <div class="z-1">
+                  <div>
+                    <div
+                      class="w-full p-3 rounded-xl shadow-lg text-xl text-center font-bold text-white group-hover:hidden h-[65px] flex items-center justify-center"
+                      style="background:#295593">Add to Cart</div>
+                    <div
+                      class="w-full p-3 rounded-xl shadow-lg text-xl text-center font-bold bg-white hidden group-hover:flex h-[65px] items-center justify-center"
+                      style="color:#295593">Add to Cart</div>
+                  </div>
+                </div>
+                <div>
+                  <div class="flex items-center w-full justify-center"><a
+                      class="w-full text-md text-center font-bold group-hover:hidden" style="color:#295593"
+                      href="products/685.html">Read More</a><a
+                      class="w-full text-md text-center font-bold group-hover:block hidden md:text-white"
+                      href="products/685.html">Read More</a></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="w-full rounded-2xl shadow-lg flex flex-col gap-y-4 relative bg-white group cursor-pointer h-auto product-card">
+            <div class="p-4 flex flex-col gap-y-4 justify-between h-full"><a href="products/692.html">
+                <div class="w-full h-64"><img
+                    src="images/products/12.png"
+                    class="w-full h-full object-cover rounded-2xl shadow-xl group-hover:shadow-none duration-700 ease-in-out" />
+                </div>
+                <div class="h-full flex-1 flex flex-col justify-between mt-8">
+                  <div class="text-lg font-bold group-hover:hidden" style="color:#295593">Thermal Science Training T7081
+                  </div>
+                  <div class="text-lg font-bold hidden group-hover:block md:text-white">Thermal Science Training T7081
+                  </div>
+                </div>
+              </a><a href="products/692.html">
+                <div class="flex w-full justify-evenly flex-wrap">
+                  <div
+                    class="bg-[#212121] rounded-full text-xs overflow-ellipsis flex-nowrap py-1 px-2 m-1 text-white font-bold text-center group-hover:bg-[#21212155]">
+                    HVAC</div>
+                  <div
+                    class="bg-[#212121] rounded-full text-xs overflow-ellipsis flex-nowrap py-1 px-2 m-1 text-white font-bold text-center group-hover:bg-[#21212155]">
+                    Construction</div>
+                </div>
+              </a>
+              <div class="flex flex-col gap-y-4">
+                <div class="z-1">
+                  <div>
+                    <div
+                      class="w-full p-3 rounded-xl shadow-lg text-xl text-center font-bold text-white group-hover:hidden h-[65px] flex items-center justify-center"
+                      style="background:#295593">Add to Cart</div>
+                    <div
+                      class="w-full p-3 rounded-xl shadow-lg text-xl text-center font-bold bg-white hidden group-hover:flex h-[65px] items-center justify-center"
+                      style="color:#295593">Add to Cart</div>
+                  </div>
+                </div>
+                <div>
+                  <div class="flex items-center w-full justify-center"><a
+                      class="w-full text-md text-center font-bold group-hover:hidden" style="color:#295593"
+                      href="products/692.html">Read More</a><a
+                      class="w-full text-md text-center font-bold group-hover:block hidden md:text-white"
+                      href="products/692.html">Read More</a></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="w-full rounded-2xl shadow-lg flex flex-col gap-y-4 relative bg-white group cursor-pointer h-auto product-card">
+            <div class="p-4 flex flex-col gap-y-4 justify-between h-full"><a href="products/731.html">
+                <div class="w-full h-64"><img
+                    src="images/products/13.png"
+                    class="w-full h-full object-cover rounded-2xl shadow-xl group-hover:shadow-none duration-700 ease-in-out" />
+                </div>
+                <div class="h-full flex-1 flex flex-col justify-between mt-8">
+                  <div class="text-lg font-bold group-hover:hidden" style="color:#295593">Temperature Process Control
+                    T5553</div>
+                  <div class="text-lg font-bold hidden group-hover:block md:text-white">Temperature Process Control
+                    T5553</div>
+                </div>
+              </a><a href="products/731.html">
+                <div class="flex w-full justify-evenly flex-wrap">
+                  <div
+                    class="bg-[#212121] rounded-full text-xs overflow-ellipsis flex-nowrap py-1 px-2 m-1 text-white font-bold text-center group-hover:bg-[#21212155]">
+                    Process Control &amp; Instrumentation</div>
+                  <div
+                    class="bg-[#212121] rounded-full text-xs overflow-ellipsis flex-nowrap py-1 px-2 m-1 text-white font-bold text-center group-hover:bg-[#21212155]">
+                    Marine</div>
+                </div>
+              </a>
+              <div class="flex flex-col gap-y-4">
+                <div class="z-1">
+                  <div>
+                    <div
+                      class="w-full p-3 rounded-xl shadow-lg text-xl text-center font-bold text-white group-hover:hidden h-[65px] flex items-center justify-center"
+                      style="background:#295593">Add to Cart</div>
+                    <div
+                      class="w-full p-3 rounded-xl shadow-lg text-xl text-center font-bold bg-white hidden group-hover:flex h-[65px] items-center justify-center"
+                      style="color:#295593">Add to Cart</div>
+                  </div>
+                </div>
+                <div>
+                  <div class="flex items-center w-full justify-center"><a
+                      class="w-full text-md text-center font-bold group-hover:hidden" style="color:#295593"
+                      href="products/731.html">Read More</a><a
+                      class="w-full text-md text-center font-bold group-hover:block hidden md:text-white"
+                      href="products/731.html">Read More</a></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="w-full rounded-2xl shadow-lg flex flex-col gap-y-4 relative bg-white group cursor-pointer h-auto product-card">
+            <div class="p-4 flex flex-col gap-y-4 justify-between h-full"><a href="products/667.html">
+                <div class="w-full h-64"><img
+                    src="images/products/14.jpg"
+                    class="w-full h-full object-cover rounded-2xl shadow-xl group-hover:shadow-none duration-700 ease-in-out" />
+                </div>
+                <div class="h-full flex-1 flex flex-col justify-between mt-8">
+                  <div class="text-lg font-bold group-hover:hidden" style="color:#295593">Tabletop Smart Factory RFID
+                    Sensors Learning System, AB L16: 87-TMS5AB1</div>
+                  <div class="text-lg font-bold hidden group-hover:block md:text-white">Tabletop Smart Factory RFID
+                    Sensors Learning System, AB L16: 87-TMS5AB1</div>
+                </div>
+              </a><a href="products/667.html">
+                <div class="flex w-full justify-evenly flex-wrap">
+                  <div
+                    class="bg-[#212121] rounded-full text-xs overflow-ellipsis flex-nowrap py-1 px-2 m-1 text-white font-bold text-center group-hover:bg-[#21212155]">
+                    Automation and Robotics (Industry 4.0)</div>
+                  <div
+                    class="bg-[#212121] rounded-full text-xs overflow-ellipsis flex-nowrap py-1 px-2 m-1 text-white font-bold text-center group-hover:bg-[#21212155]">
+                    CNC &amp; Robotics</div>
+                </div>
+              </a>
+              <div class="flex flex-col gap-y-4">
+                <div class="z-1">
+                  <div>
+                    <div
+                      class="w-full p-3 rounded-xl shadow-lg text-xl text-center font-bold text-white group-hover:hidden h-[65px] flex items-center justify-center"
+                      style="background:#295593">Add to Cart</div>
+                    <div
+                      class="w-full p-3 rounded-xl shadow-lg text-xl text-center font-bold bg-white hidden group-hover:flex h-[65px] items-center justify-center"
+                      style="color:#295593">Add to Cart</div>
+                  </div>
+                </div>
+                <div>
+                  <div class="flex items-center w-full justify-center"><a
+                      class="w-full text-md text-center font-bold group-hover:hidden" style="color:#295593"
+                      href="products/667.html">Read More</a><a
+                      class="w-full text-md text-center font-bold group-hover:block hidden md:text-white"
+                      href="products/667.html">Read More</a></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="w-full rounded-2xl shadow-lg flex flex-col gap-y-4 relative bg-white group cursor-pointer h-auto product-card">
+            <div class="p-4 flex flex-col gap-y-4 justify-between h-full"><a href="products/669.html">
+                <div class="w-full h-64"><img
+                    src="images/products/15.png"
+                    class="w-full h-full object-cover rounded-2xl shadow-xl group-hover:shadow-none duration-700 ease-in-out" />
+                </div>
+                <div class="h-full flex-1 flex flex-col justify-between mt-8">
+                  <div class="text-lg font-bold group-hover:hidden" style="color:#295593">Tabletop Smart Factory Barcode
+                    Learning System 87-TBR1AB</div>
+                  <div class="text-lg font-bold hidden group-hover:block md:text-white">Tabletop Smart Factory Barcode
+                    Learning System 87-TBR1AB</div>
+                </div>
+              </a><a href="products/669.html">
+                <div class="flex w-full justify-evenly flex-wrap">
+                  <div
+                    class="bg-[#212121] rounded-full text-xs overflow-ellipsis flex-nowrap py-1 px-2 m-1 text-white font-bold text-center group-hover:bg-[#21212155]">
+                    Automation and Robotics (Industry 4.0)</div>
+                  <div
+                    class="bg-[#212121] rounded-full text-xs overflow-ellipsis flex-nowrap py-1 px-2 m-1 text-white font-bold text-center group-hover:bg-[#21212155]">
+                    CNC &amp; Robotics</div>
+                </div>
+              </a>
+              <div class="flex flex-col gap-y-4">
+                <div class="z-1">
+                  <div>
+                    <div
+                      class="w-full p-3 rounded-xl shadow-lg text-xl text-center font-bold text-white group-hover:hidden h-[65px] flex items-center justify-center"
+                      style="background:#295593">Add to Cart</div>
+                    <div
+                      class="w-full p-3 rounded-xl shadow-lg text-xl text-center font-bold bg-white hidden group-hover:flex h-[65px] items-center justify-center"
+                      style="color:#295593">Add to Cart</div>
+                  </div>
+                </div>
+                <div>
+                  <div class="flex items-center w-full justify-center"><a
+                      class="w-full text-md text-center font-bold group-hover:hidden" style="color:#295593"
+                      href="products/669.html">Read More</a><a
+                      class="w-full text-md text-center font-bold group-hover:block hidden md:text-white"
+                      href="products/669.html">Read More</a></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="w-full rounded-2xl shadow-lg flex flex-col gap-y-4 relative bg-white group cursor-pointer h-auto product-card">
+            <div class="p-4 flex flex-col gap-y-4 justify-between h-full"><a href="products/668.html">
+                <div class="w-full h-64"><img
+                    src="images/products/16.jpg"
+                    class="w-full h-full object-cover rounded-2xl shadow-xl group-hover:shadow-none duration-700 ease-in-out" />
+                </div>
+                <div class="h-full flex-1 flex flex-col justify-between mt-8">
+                  <div class="text-lg font-bold group-hover:hidden" style="color:#295593">Tabletop Mechatronics Smart
+                    Factory Ethernet Learning System - AB Micro820: 87-TENAB82</div>
+                  <div class="text-lg font-bold hidden group-hover:block md:text-white">Tabletop Mechatronics Smart
+                    Factory Ethernet Learning System - AB Micro820: 87-TENAB82</div>
+                </div>
+              </a><a href="products/668.html">
+                <div class="flex w-full justify-evenly flex-wrap">
+                  <div
+                    class="bg-[#212121] rounded-full text-xs overflow-ellipsis flex-nowrap py-1 px-2 m-1 text-white font-bold text-center group-hover:bg-[#21212155]">
+                    Automation and Robotics (Industry 4.0)</div>
+                  <div
+                    class="bg-[#212121] rounded-full text-xs overflow-ellipsis flex-nowrap py-1 px-2 m-1 text-white font-bold text-center group-hover:bg-[#21212155]">
+                    Mechatronics</div>
+                  <div
+                    class="bg-[#212121] rounded-full text-xs overflow-ellipsis flex-nowrap py-1 px-2 m-1 text-white font-bold text-center group-hover:bg-[#21212155]">
+                    CNC &amp; Robotics</div>
+                </div>
+              </a>
+              <div class="flex flex-col gap-y-4">
+                <div class="z-1">
+                  <div>
+                    <div
+                      class="w-full p-3 rounded-xl shadow-lg text-xl text-center font-bold text-white group-hover:hidden h-[65px] flex items-center justify-center"
+                      style="background:#295593">Add to Cart</div>
+                    <div
+                      class="w-full p-3 rounded-xl shadow-lg text-xl text-center font-bold bg-white hidden group-hover:flex h-[65px] items-center justify-center"
+                      style="color:#295593">Add to Cart</div>
+                  </div>
+                </div>
+                <div>
+                  <div class="flex items-center w-full justify-center"><a
+                      class="w-full text-md text-center font-bold group-hover:hidden" style="color:#295593"
+                      href="products/668.html">Read More</a><a
+                      class="w-full text-md text-center font-bold group-hover:block hidden md:text-white"
+                      href="products/668.html">Read More</a></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="w-full rounded-2xl shadow-lg flex flex-col gap-y-4 relative bg-white group cursor-pointer h-auto product-card">
+            <div class="p-4 flex flex-col gap-y-4 justify-between h-full"><a href="products/700.html">
+                <div class="w-full h-64"><img
+                    src="images/products/17.jpg"
+                    class="w-full h-full object-cover rounded-2xl shadow-xl group-hover:shadow-none duration-700 ease-in-out" />
+                </div>
+                <div class="h-full flex-1 flex flex-col justify-between mt-8">
+                  <div class="text-lg font-bold group-hover:hidden" style="color:#295593">Surveying Training System for
+                    High School 96-SV1</div>
+                  <div class="text-lg font-bold hidden group-hover:block md:text-white">Surveying Training System for
+                    High School 96-SV1</div>
+                </div>
+              </a><a href="products/700.html">
+                <div class="flex w-full justify-evenly flex-wrap">
+                  <div
+                    class="bg-[#212121] rounded-full text-xs overflow-ellipsis flex-nowrap py-1 px-2 m-1 text-white font-bold text-center group-hover:bg-[#21212155]">
+                    Construction</div>
+                  <div
+                    class="bg-[#212121] rounded-full text-xs overflow-ellipsis flex-nowrap py-1 px-2 m-1 text-white font-bold text-center group-hover:bg-[#21212155]">
+                    Civil Engineering</div>
+                  <div
+                    class="bg-[#212121] rounded-full text-xs overflow-ellipsis flex-nowrap py-1 px-2 m-1 text-white font-bold text-center group-hover:bg-[#21212155]">
+                    High School</div>
+                </div>
+              </a>
+              <div class="flex flex-col gap-y-4">
+                <div class="z-1">
+                  <div>
+                    <div
+                      class="w-full p-3 rounded-xl shadow-lg text-xl text-center font-bold text-white group-hover:hidden h-[65px] flex items-center justify-center"
+                      style="background:#295593">Add to Cart</div>
+                    <div
+                      class="w-full p-3 rounded-xl shadow-lg text-xl text-center font-bold bg-white hidden group-hover:flex h-[65px] items-center justify-center"
+                      style="color:#295593">Add to Cart</div>
+                  </div>
+                </div>
+                <div>
+                  <div class="flex items-center w-full justify-center"><a
+                      class="w-full text-md text-center font-bold group-hover:hidden" style="color:#295593"
+                      href="products/700.html">Read More</a><a
+                      class="w-full text-md text-center font-bold group-hover:block hidden md:text-white"
+                      href="products/700.html">Read More</a></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="w-full rounded-2xl shadow-lg flex flex-col gap-y-4 relative bg-white group cursor-pointer h-auto product-card">
+            <div class="p-4 flex flex-col gap-y-4 justify-between h-full"><a href="products/710.html">
+                <div class="w-full h-64"><img
+                    src="images/products/18.jpg"
+                    class="w-full h-full object-cover rounded-2xl shadow-xl group-hover:shadow-none duration-700 ease-in-out" />
+                </div>
+                <div class="h-full flex-1 flex flex-col justify-between mt-8">
+                  <div class="text-lg font-bold group-hover:hidden" style="color:#295593">Structural Design Training
+                    System 94-DOS1</div>
+                  <div class="text-lg font-bold hidden group-hover:block md:text-white">Structural Design Training
+                    System 94-DOS1</div>
+                </div>
+              </a><a href="products/710.html">
+                <div class="flex w-full justify-evenly flex-wrap">
+                  <div
+                    class="bg-[#212121] rounded-full text-xs overflow-ellipsis flex-nowrap py-1 px-2 m-1 text-white font-bold text-center group-hover:bg-[#21212155]">
+                    Construction</div>
+                  <div
+                    class="bg-[#212121] rounded-full text-xs overflow-ellipsis flex-nowrap py-1 px-2 m-1 text-white font-bold text-center group-hover:bg-[#21212155]">
+                    Civil Engineering</div>
+                </div>
+              </a>
+              <div class="flex flex-col gap-y-4">
+                <div class="z-1">
+                  <div>
+                    <div
+                      class="w-full p-3 rounded-xl shadow-lg text-xl text-center font-bold text-white group-hover:hidden h-[65px] flex items-center justify-center"
+                      style="background:#295593">Add to Cart</div>
+                    <div
+                      class="w-full p-3 rounded-xl shadow-lg text-xl text-center font-bold bg-white hidden group-hover:flex h-[65px] items-center justify-center"
+                      style="color:#295593">Add to Cart</div>
+                  </div>
+                </div>
+                <div>
+                  <div class="flex items-center w-full justify-center"><a
+                      class="w-full text-md text-center font-bold group-hover:hidden" style="color:#295593"
+                      href="products/710.html">Read More</a><a
+                      class="w-full text-md text-center font-bold group-hover:block hidden md:text-white"
+                      href="products/710.html">Read More</a></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="w-full rounded-2xl shadow-lg flex flex-col gap-y-4 relative bg-white group cursor-pointer h-auto product-card">
+            <div class="p-4 flex flex-col gap-y-4 justify-between h-full"><a href="products/689.html">
+                <div class="w-full h-64"><img
+                    src="images/products/19.png"
+                    class="w-full h-full object-cover rounded-2xl shadow-xl group-hover:shadow-none duration-700 ease-in-out" />
+                </div>
+                <div class="h-full flex-1 flex flex-col justify-between mt-8">
+                  <div class="text-lg font-bold group-hover:hidden" style="color:#295593">Steam Systems 1 Learning
+                    System 950-SH1</div>
+                  <div class="text-lg font-bold hidden group-hover:block md:text-white">Steam Systems 1 Learning System
+                    950-SH1</div>
+                </div>
+              </a><a href="products/689.html">
+                <div class="flex w-full justify-evenly flex-wrap">
+                  <div
+                    class="bg-[#212121] rounded-full text-xs overflow-ellipsis flex-nowrap py-1 px-2 m-1 text-white font-bold text-center group-hover:bg-[#21212155]">
+                    HVAC</div>
+                  <div
+                    class="bg-[#212121] rounded-full text-xs overflow-ellipsis flex-nowrap py-1 px-2 m-1 text-white font-bold text-center group-hover:bg-[#21212155]">
+                    Construction</div>
+                  <div
+                    class="bg-[#212121] rounded-full text-xs overflow-ellipsis flex-nowrap py-1 px-2 m-1 text-white font-bold text-center group-hover:bg-[#21212155]">
+                    Mechanical Engineering</div>
+                </div>
+              </a>
+              <div class="flex flex-col gap-y-4">
+                <div class="z-1">
+                  <div>
+                    <div
+                      class="w-full p-3 rounded-xl shadow-lg text-xl text-center font-bold text-white group-hover:hidden h-[65px] flex items-center justify-center"
+                      style="background:#295593">Add to Cart</div>
+                    <div
+                      class="w-full p-3 rounded-xl shadow-lg text-xl text-center font-bold bg-white hidden group-hover:flex h-[65px] items-center justify-center"
+                      style="color:#295593">Add to Cart</div>
+                  </div>
+                </div>
+                <div>
+                  <div class="flex items-center w-full justify-center"><a
+                      class="w-full text-md text-center font-bold group-hover:hidden" style="color:#295593"
+                      href="products/689.html">Read More</a><a
+                      class="w-full text-md text-center font-bold group-hover:block hidden md:text-white"
+                      href="products/689.html">Read More</a></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="w-full rounded-2xl shadow-lg flex flex-col gap-y-4 relative bg-white group cursor-pointer h-auto product-card">
+            <div class="p-4 flex flex-col gap-y-4 justify-between h-full"><a href="products/697.html">
+                <div class="w-full h-64"><img
+                    src="images/products/20.jpg"
+                    class="w-full h-full object-cover rounded-2xl shadow-xl group-hover:shadow-none duration-700 ease-in-out" />
+                </div>
+                <div class="h-full flex-1 flex flex-col justify-between mt-8">
+                  <div class="text-lg font-bold group-hover:hidden" style="color:#295593">Split Flange Coupling Learning
+                    System 95-PAS2</div>
+                  <div class="text-lg font-bold hidden group-hover:block md:text-white">Split Flange Coupling Learning
+                    System 95-PAS2</div>
+                </div>
+              </a><a href="products/697.html">
+                <div class="flex w-full justify-evenly flex-wrap">
+                  <div
+                    class="bg-[#212121] rounded-full text-xs overflow-ellipsis flex-nowrap py-1 px-2 m-1 text-white font-bold text-center group-hover:bg-[#21212155]">
+                    Mechanical Engineering</div>
+                </div>
+              </a>
+              <div class="flex flex-col gap-y-4">
+                <div class="z-1">
+                  <div>
+                    <div
+                      class="w-full p-3 rounded-xl shadow-lg text-xl text-center font-bold text-white group-hover:hidden h-[65px] flex items-center justify-center"
+                      style="background:#295593">Add to Cart</div>
+                    <div
+                      class="w-full p-3 rounded-xl shadow-lg text-xl text-center font-bold bg-white hidden group-hover:flex h-[65px] items-center justify-center"
+                      style="color:#295593">Add to Cart</div>
+                  </div>
+                </div>
+                <div>
+                  <div class="flex items-center w-full justify-center"><a
+                      class="w-full text-md text-center font-bold group-hover:hidden" style="color:#295593"
+                      href="products/697.html">Read More</a><a
+                      class="w-full text-md text-center font-bold group-hover:block hidden md:text-white"
+                      href="products/697.html">Read More</a></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="w-full col-span-1 md:col-span-2 xl:col-span-3 2xl:col-span-4 flex items-center justify-center">
+          </div>
+        </div>
+      </div>
+      <!-- Footer -->
+      <footer class="p-4 rounded-t-2xl shadow md:px-6 md:py-8 bg-gray-900 mt-auto">
+        <div class="grid lg:grid-cols-3 w-full gap-8">
+            <a href="index.html" class="flex items-center justify-between">
+                <div class="lg:hidden block"></div>
+                <img alt="Kitmeer Logo" src="images/navbar-footer/logo_whitec8f2.png" class="h-16 w-auto">
+                <div></div>
+            </a>
+            <ul
+                class="flex flex-col lg:flex-row justify-center items-left lg:items-center mb-6 text-sm text-gray-500 sm:mb-0 dark:text-gray-400 mx-auto">
+                <li><a class="mr-4 hover:underline text-center text-xl font-semibold md:mr-6" href="index.html">Home</a>
+                </li>
+                <li><a class="mr-4 hover:underline text-center text-xl font-semibold md:mr-6" href="about">About</a>
+                </li>
+                <li><a class="mr-4 hover:underline text-center text-xl font-semibold md:mr-6" href="products">All
+                        Products</a></li>
+                <li><a class="hover:underline text-center text-xl font-semibold" href="contact">Contact</a></li>
+            </ul>
+            <span class="items-center justify-between flex text-sm text-gray-500 sm:text-center dark:text-gray-400">
+                <div></div>
+                <div>© 2022 <a href="index.html" class="hover:underline ml-1">Kitmeer™</a>. All Rights Reserved.</div>
+                <div class="lg:hidden block"></div>
+            </span>
+        </div>
+    </footer>
+  <script src="products.js"></script>
+</body>
+
+</html>
